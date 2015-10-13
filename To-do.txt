@@ -1,0 +1,1 @@
+add an update function to our unit class as well as a state string varriable
