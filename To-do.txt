@@ -1,4 +1,4 @@
-In this task you will need to use the Observer, Adapter, Facade and Mediator design patterns to create and
+﻿In this task you will need to use the Observer, Adapter, Facade and Mediator design patterns to create and
 simulate movement among units. You will need the classes to be able to satisfy the Observer, Adapter, Facade
 and Mediator design patterns.
 By making use of the Observer and Mediator patterns, you will be able to simulate game play amongst yourself
@@ -29,4 +29,5 @@ event()
 act()
 
 AttackPart notify function needs atttention
+rits was here
 ///////////////////////////////////////////////////////////////////////////////////////////////////
