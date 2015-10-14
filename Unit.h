@@ -16,8 +16,9 @@ Student Number: 15075754
 #include <string>
 #include <iostream>   
 
-
 using namespace std;
+
+class Subject;
 
 class Unit
 {
@@ -28,6 +29,9 @@ class Unit
 		string subClass;	//Either mage, soldier or thief
 		string skill;	//Either magic, bludgeoning or piercing 
 		string unit;	//Either a player/hero or monster/mob
+
+		//Observer
+		Subject* subject;
 		
 	public:
 		Unit(int, int);
@@ -45,6 +49,11 @@ class Unit
 		bludgeoning deal more damage to piercing 
 		piercing deals more damage to magic
 		*/
+
+		//Observer
+		virtual ~Unit();
+		virtual void update() = 0;
+		void registerSubject(Subject *subject);
 };
 //static int count = 0;
 

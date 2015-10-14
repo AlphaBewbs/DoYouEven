@@ -11,6 +11,7 @@ Student Number: 15075754
 
 ********************************************/
 #include "Unit.h"     
+#include "Subject.h"
 #include <sstream>
 
 Unit::Unit(int _health, int _damage)
@@ -38,4 +39,16 @@ void Unit::takeDamage(int _damage)
 
 	if (health <= 0)
 		cout << "Unit # " << id << " has died...";
+}
+
+//Observer
+~Unit()
+{
+	if(mSubject != NULL)
+		mSubject->detach(this);
+}
+
+void Unit::registerSubject(Subject * _subject)
+{
+	subject = ssubject;
 }

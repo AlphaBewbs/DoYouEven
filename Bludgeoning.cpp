@@ -18,24 +18,8 @@ using namespace std;
 Bludgeoning::Bludgeoning(int _health, int _damage) : Unit(_health, _damage)
 {
 	skill = "Bludgeoning";
-	//cout << "Creating -- " << getDescription();
-}
-
-/*string Bludgeoning::getDescription() const
-{
-	stringstream ss;
-	ss << "Unit # " << id << ": ";
-	ss << subClass << " " << skill << ", ";
-	ss << "Health: " << health;
-	ss << "Damage: " << damage;
-	return ss.str();
-}*/
-
-//Prototype
-Bludgeoning* Bludgeoning::clone()
-{
-	cout << "Cloning -- " << getDescription();
-	return new Bludgeoning(*this);
+	state = "";
+	cout << "Creating -- " <<  getDescription();
 }
 
 string Bludgeoning::getUnit()
@@ -59,4 +43,25 @@ void Bludgeoning::attack(Unit* enemy)
 		enemy->takeDamage(damage + 3);
 	else
 		enemy->takeDamage(damage);
+}
+
+//Prototype
+Bludgeoning* Bludgeoning::clone()
+{
+	cout << "Cloning -- " << getDescription();
+	return new Bludgeoning(*this);
+}
+
+//Observer
+void Bludgeoning::update()
+{
+	state = subject->state();
+	if(state == "")
+	{
+		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;
+	}
+	else if(state == "Fighting")
+	{
+		cout << "\tThe " << subClass << " is fighting brutaly!" << endl;	
+	}
 }

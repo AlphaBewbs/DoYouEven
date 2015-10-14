@@ -23,7 +23,7 @@ class Environment : public Subject
 	public:
 		Environment();
 		string state();
-		void setState(string state);	
+		void setState(string);	
 };
 
 #endif
