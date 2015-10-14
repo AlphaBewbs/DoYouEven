@@ -34,8 +34,13 @@ class Piercing : public Unit
 
 		//Prototype
 		virtual Piercing* clone(); 
+
 		//Observer
 		void update();
+
+		//Mediator
+		virtual string event();
+		virtual void act();
 };
 
 class Thief : public Piercing

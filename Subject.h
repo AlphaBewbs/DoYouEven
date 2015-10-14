@@ -17,6 +17,7 @@ Student Number: 15075754
 #include <vector>
 #include <string>
 #include <iostream>
+
 #include "Unit.h"
 
 using namespace std;
@@ -36,3 +37,4 @@ class Subject
 		virtual string state() = 0;
 		virtual void setState(string state) = 0;
 };
+#endif

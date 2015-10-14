@@ -65,3 +65,20 @@ void Bludgeoning::update()
 		cout << "\tThe " << subClass << " is fighting brutaly!" << endl;	
 	}
 }
+
+//Mediator
+string Bludgeoning::event()
+{
+	/*
+	return sure;
+	EXAMPLE CODE
+	*/
+}
+
+void Bludgeoning::act()
+{
+	/*
+	cout << "\tA brave soldier attacks." << endl;
+	EXAMPLE CODE
+	*/
+}

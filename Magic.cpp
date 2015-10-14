@@ -8,7 +8,7 @@ Student Number: 15015302
 
 Name: Ritesh Doolabh
 Student Number: 15075754
-
+uopupu
 ********************************************/
 #include "Magic.h"
 #include <sstream>
@@ -64,4 +64,21 @@ void Magic::update()
 	{
 		cout << "\tThe " << subClass << " is fighting with Magic!" << endl;	
 	}
+}
+
+//Mediator
+string Magic::event()
+{
+	/*
+	return sure;
+	EXAMPLE CODE
+	*/
+}
+
+void Magic::act()
+{
+	/*
+	cout << "\tA brave soldier attacks." << endl;
+	EXAMPLE CODE
+	*/
 }

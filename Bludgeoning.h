@@ -34,8 +34,13 @@ class Bludgeoning : public Unit
 
 		//Prototype
 		virtual Bludgeoning* clone(); 
+
 		//Observer
 		void update();
+
+		//Mediator
+		virtual string event();
+		virtual void act();
 };
 
 class Soldier : public Bludgeoning
