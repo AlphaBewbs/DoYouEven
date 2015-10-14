@@ -14,18 +14,28 @@ Student Number: 15075754
 #define MAGIC_H
 
 #include "Unit.h"
+#include "Environment.h"
 
 using namespace std;
 
 class Magic : public Unit
 {
+	private:
+		//Observer
+		string state;	
+
 	public:
-		Magic(int, int);	//Health, damage
-		virtual Magic* clone();	//Prototype
+		Magic(int, int); 	//Health, damage
+			
 		virtual string getUnit();
 		virtual string getSubClass();
 		virtual string getSkill();
 		void attack(Unit*);
+
+		//Prototype
+		virtual Magic* clone(); 
+		//Observer
+		void update();
 };
 
 class Mage : public Magic

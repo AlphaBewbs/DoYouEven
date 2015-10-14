@@ -18,15 +18,8 @@ using namespace std;
 Magic::Magic(int _health, int _damage):Unit(_health, _damage)
 {
 	skill = "Magic";
+	state = "";
 	cout << "Creating -- " <<  getDescription();
-}
-
-
-//Prototype
-Magic* Magic::clone()
-{
-	cout << "Cloning -- " << getDescription();
-	return new Magic(*this);
 }
 
 string Magic::getUnit()
@@ -50,4 +43,25 @@ void Magic::attack(Unit* enemy)
 		enemy->takeDamage(damage + 3);
 	else
 		enemy->takeDamage(damage);
+}
+
+//Prototype
+Magic* Magic::clone()
+{
+	cout << "Cloning -- " << getDescription();
+	return new Magic(*this);
+}
+
+//Observer
+void Magic::update()
+{
+	state = subject->state();
+	if(state == "")
+	{
+		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;
+	}
+	else if(state == "Fighting")
+	{
+		cout << "\tThe " << subClass << " is fighting with Magic!" << endl;	
+	}
 }

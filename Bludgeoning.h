@@ -14,39 +14,48 @@ Student Number: 15075754
 #define BLUDGEONING_H
 
 #include "Unit.h"
+#include "Environment.h"
 
 using namespace std;
 
 class Bludgeoning : public Unit
 {
-public:
-	Bludgeoning(int, int); //Health, damage
-	virtual Bludgeoning* clone(); 	//Prototype
-	//virtual string getDescription() const;
-	virtual string getUnit();
-	virtual string getSubClass();
-	virtual string getSkill();
-	void attack(Unit*);
+	private:
+		//Observer
+		string state;	
+
+	public:
+		Bludgeoning(int, int); 	//Health, damage
+			
+		virtual string getUnit();
+		virtual string getSubClass();
+		virtual string getSkill();
+		void attack(Unit*);
+
+		//Prototype
+		virtual Bludgeoning* clone(); 
+		//Observer
+		void update();
 };
 
 class Soldier : public Bludgeoning
 {
-public:
-	Soldier() :Bludgeoning(100, 8) 
-	{
-		subClass = "Soldier";
-		unit = "Player";
-	}
+	public:
+		Soldier() :Bludgeoning(100, 8) 
+		{
+			subClass = "Soldier";
+			unit = "Player";
+		}
 };
 
 class Ogre : public Bludgeoning
 {
-public:
-	Ogre() :Bludgeoning(120, 5) 
-	{
-		subClass = "Ogre";
-		unit = "Monster";
-	}
+	public:
+		Ogre() :Bludgeoning(120, 5) 
+		{
+			subClass = "Ogre";
+			unit = "Monster";
+		}
 };
 
 #endif

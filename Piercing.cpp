@@ -18,29 +18,8 @@ using namespace std;
 Piercing::Piercing(int _health, int _damage) :Unit(_health, _damage)
 {
 	skill = "Piercing";
-	//cout << "Creating -- " << getDescription();
-}
-
-/*string Piercing::getDescription() const
-{
-	stringstream ss;
-	ss << "Unit # " << id << ": ";
-	ss << subClass << " " << skill << ", ";
-	ss << "Health: " << health;
-	ss << "Damage: " << damage;
-	return ss.str();
-}/*
-
-/*string Piercing::getDescription() const
-{
-	return Unit::getDescription();
-}*/
-
-//Prototype
-Piercing* Piercing::clone()
-{
-	cout << "Cloning -- " << getDescription();
-	return new Piercing(*this);
+	state = "";
+	cout << "Creating -- " <<  getDescription();
 }
 
 string Piercing::getUnit()
@@ -64,4 +43,25 @@ void Piercing::attack(Unit* enemy)
 		enemy->takeDamage(damage + 3);
 	else
 		enemy->takeDamage(damage);
+}
+
+//Prototype
+Piercing* Piercing::clone()
+{
+	cout << "Cloning -- " << getDescription();
+	return new Piercing(*this);
+}
+
+//Observer
+void Piercing::update()
+{
+	state = subject->state();
+	if(state == "")
+	{
+		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;
+	}
+	else if(state == "Fighting")
+	{
+		cout << "\tThe " << subClass << " is fighting sneakily!" << endl;	
+	}
 }
