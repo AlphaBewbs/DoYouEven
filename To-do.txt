@@ -20,5 +20,13 @@ system.
 • The Adapter and Facade patterns will be used as a layer of abstraction to allow for a simplified interface
 to be used by the Observer and mediator classes.
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 Todo
 tell the observer when the pc turn computer turn
+
+Implement these function for the mediator im our concrete unit classes 
+event()
+act()
+
+AttackPart notify function needs atttention
+///////////////////////////////////////////////////////////////////////////////////////////////////
