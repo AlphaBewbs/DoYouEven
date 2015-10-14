@@ -12,14 +12,18 @@ Student Number: 15075754
 ********************************************/
 #include "Unit.h"     
 #include "Subject.h"
+#include "Party.h"
 #include <sstream>
 
 Unit::Unit(int _health, int _damage)
 {
 	health = _health;
 	damage = _damage;
+
 	// = ++count; 	//PRE INCREMENT
 	//id = count++;
+
+	party = NULL; //Mediator obj
 }
 
 string Unit::getDescription() const
@@ -51,4 +55,20 @@ void Unit::takeDamage(int _damage)
 void Unit::registerSubject(Subject * _subject)
 {
 	subject = ssubject;
+}
+
+//Mediator
+void Unit::setSquad(Party* _party)
+{
+	mSquad = squad;
+}
+
+void Unit::changed()
+{
+	_party->notify(this);
+}
+
+void Unit::inspect()
+{
+	changed();
 }
