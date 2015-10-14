@@ -34,8 +34,13 @@ class Magic : public Unit
 
 		//Prototype
 		virtual Magic* clone(); 
+
 		//Observer
 		void update();
+
+		//Mediator
+		virtual string event();
+		virtual void act();
 };
 
 class Mage : public Magic

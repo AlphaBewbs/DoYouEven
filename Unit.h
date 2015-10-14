@@ -19,7 +19,7 @@ Student Number: 15075754
 using namespace std;
 
 class Subject;
-class Party
+class Party;
 
 class Unit
 {
@@ -63,7 +63,7 @@ class Unit
 		void registerSubject(Subject *subject);
 
 		//Mediator
-		void setSquad(Party *);
+		void setSquad(Party*);
 		void changed();
 		void inspect();
 		virtual string event() = 0;

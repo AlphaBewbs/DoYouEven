@@ -46,26 +46,26 @@ void Unit::takeDamage(int _damage)
 }
 
 //Observer
-~Unit()
+Unit::~Unit()
 {
-	if(mSubject != NULL)
-		mSubject->detach(this);
+	if(subject != NULL)
+		subject->detach(this);
 }
 
 void Unit::registerSubject(Subject * _subject)
 {
-	subject = ssubject;
+	subject = subject;
 }
 
 //Mediator
 void Unit::setSquad(Party* _party)
 {
-	mSquad = squad;
+	party = _party;
 }
 
 void Unit::changed()
 {
-	_party->notify(this);
+	party->notify(this);
 }
 
 void Unit::inspect()

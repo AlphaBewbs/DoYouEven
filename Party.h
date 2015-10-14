@@ -22,8 +22,8 @@ class Party
 {
 	public:
 		virtual ~Party(){}
-		virtual void notify(Unit *Unit) = 0;
-		virtual void add(Unit *Unit) = 0;
+		virtual void notify(Unit *) = 0;
+		virtual void add(Unit *) = 0;
 };
 
 #endif

@@ -17,7 +17,6 @@ Student Number: 15075754
 #include "subject.h"
 
 //Concrete Observer//
-
 class Environment : public Subject
 {
 	private:

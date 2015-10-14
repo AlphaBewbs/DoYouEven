@@ -10,8 +10,9 @@ Name: Ritesh Doolabh
 Student Number: 15075754
 
 ********************************************/
+#include "AttackParty.h"
 
-void AssaultSquad::notify(Unit *_unit)
+void AttackParty::notify(Unit *_unit)
 {
 	string event = _unit->event();
 	/* EXAMPLE CODE
@@ -34,6 +35,6 @@ void AssaultSquad::notify(Unit *_unit)
 
 void AttackParty::add(Unit * _unit)
 {
-	units.push_back(unit);
+	unitParty.push_back(_unit);
 	_unit->setSquad(this);
 }

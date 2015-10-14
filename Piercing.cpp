@@ -65,3 +65,20 @@ void Piercing::update()
 		cout << "\tThe " << subClass << " is fighting sneakily!" << endl;	
 	}
 }
+
+//Mediator
+string Piercing::event()
+{
+	/*
+	return sure;
+	EXAMPLE CODE
+	*/
+}
+
+void Piercing::act()
+{
+	/*
+	cout << "\tA brave soldier attacks." << endl;
+	EXAMPLE CODE
+	*/
+}

@@ -19,7 +19,7 @@ Student Number: 15075754
 
 //Concrete Mediator//
 
-class Attackparty : public Party
+class AttackParty : public Party
 {
 
 	private:

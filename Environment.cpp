@@ -12,8 +12,7 @@ Student Number: 15075754
 ********************************************/
 #include "environment.h"
 
-Environment::Environment()
-	: Subject()
+Environment::Environment(): Subject()
 {
 	mState = "";
 }
