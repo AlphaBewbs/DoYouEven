@@ -11,21 +11,23 @@ Student Number: 15075754
 
 ********************************************/
 
-#ifndef ENVIRONMENT_H
-#define ENVIRONMENT_H
+#ifndef ATTACKPARTY_H
+#define ATTACKPARTY_H
 
-#include "subject.h"
+#include "Party.h"
+#include <vector>
 
-//Concrete Observer//
+//Concrete Mediator//
 
-class Environment : public Subject
+class Attackparty : public Party
 {
+
 	private:
-		string mState;
+		vector<Unit*> unitParty;
+
 	public:
-		Environment();
-		string state();
-		void setState(string);	
+		void notify(Unit *);
+		void add(Unit *);
 };
 
 #endif

@@ -21,6 +21,8 @@ Student Number: 15075754
 
 using namespace std;
 
+//Observer//
+
 class Subject
 {
 	private:
