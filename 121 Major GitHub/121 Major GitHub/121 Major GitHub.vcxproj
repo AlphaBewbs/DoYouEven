@@ -18,6 +18,27 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\AttackParty.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Bludgeoning.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Enviroment.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Magic.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Party.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Piercing.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Subject.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Unit.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\UnitFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\AttackParty.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Bludgeoning.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Environment.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Magic.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Main.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Piercing.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Subject.cpp" />
+    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Unit.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FFABD438-0006-4A77-86D8-41D0E5D39A11}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,27 +166,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\AttackParty.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Bludgeoning.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Enviroment.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Magic.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Party.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Piercing.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Subject.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Unit.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\DoYouEven\UnitFactory.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\AttackParty.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Bludgeoning.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Environment.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Magic.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Piercing.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Subject.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\DoYouEven\Unit.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
