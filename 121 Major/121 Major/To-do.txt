@@ -1,0 +1,33 @@
+﻿In this task you will need to use the Observer, Adapter, Facade and Mediator design patterns to create and
+simulate movement among units. You will need the classes to be able to satisfy the Observer, Adapter, Facade
+and Mediator design patterns.
+By making use of the Observer and Mediator patterns, you will be able to simulate game play amongst yourself
+and the computer. The Observer should simply observe the game play and alert each the player when it is
+their turn and allow the computer to be informed when it is it’s turn. 
+
+The Mediator pattern is implemented by
+using the observer pattern in such a way that the classes should not communicate directly with one another but
+rather communicate through the mediator and observer respectively. 
+
+The Adapter and Facade pattern should
+be implemented in such as way to allow for adaptation between the classes and the Observer and Mediator
+patterns. The Facade is used to give the impression that the classes offer a simple method of taking damage,
+thereby hiding the Rock, Paper, Scissors complexity (i.e. you will have one function to allow for damage to
+be taken by all units).
+You will need to allow for the map to be updated after each turn as the units move through the map.
+• The Observer and Mediator patterns will be used to organise the game play into a turn based playing
+system.
+• The Adapter and Facade patterns will be used as a layer of abstraction to allow for a simplified interface
+to be used by the Observer and mediator classes.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+Todo
+tell the observer when the pc turn computer turn
+
+Implement these function for the mediator im our concrete unit classes 
+event()
+act()
+
+AttackPart notify function needs atttention
+rits was here
+///////////////////////////////////////////////////////////////////////////////////////////////////
