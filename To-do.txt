@@ -16,10 +16,16 @@ TODO
 NOTES - FROM KYLE
 	Going to work on adapter and facade pattern 
 
-CHANGING TERMINAL COLOURS
+CHANGING TERMINAL COLOURS FOR VISUAL
 	system("Color D4");
 		std::cout << "\t\t\t    Hello World" << std::endl;
 	system("Color E5");
+
+CHANING TERMINAL COOURS FOR LINUX
+cout << "\033[1;31mbold red text\033[0m\n";
+Here, \033 is the ESC character, ASCII 27. It is followed by [, then one or two numbers separated by ;, and finally the letter m. See the table on Wikipedia for the meaning of the numbers.
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 NOTES - FROM RITZ
 
