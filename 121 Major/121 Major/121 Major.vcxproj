@@ -149,6 +149,7 @@
     <ClInclude Include="AttackParty.h" />
     <ClInclude Include="Bludgeoning.h" />
     <ClInclude Include="Environment.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Party.h" />
     <ClInclude Include="Piercing.h" />
@@ -160,6 +161,7 @@
     <ClCompile Include="AttackParty.cpp" />
     <ClCompile Include="Bludgeoning.cpp" />
     <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="Magic.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Piercing.cpp" />

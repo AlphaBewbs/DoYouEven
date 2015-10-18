@@ -1,6 +1,6 @@
 ﻿////////////////////////////////////////////////////////////////////////////////////////////////////
 COMPLETED
-	Implemented these function for the mediator in our concrete unit classes 
+	Implemented these function for the mediator in our concrete unit classes
 	event()
 	act()
 
@@ -14,7 +14,14 @@ TODO
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 NOTES - FROM KYLE
-	Going to work on adapter and facade pattern 
+	Facade pattern is going well.
+	Been thinking we should add a name variable to the unit class so we can name the users hero.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+NOTES - FROM RITZ
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 CHANGING TERMINAL COLOURS FOR VISUAL
 	system("Color D4");
@@ -23,20 +30,5 @@ CHANGING TERMINAL COLOURS FOR VISUAL
 
 CHANING TERMINAL COOURS FOR LINUX
 cout << "\033[1;31mbold red text\033[0m\n";
-Here, \033 is the ESC character, ASCII 27. It is followed by [, then one or two numbers separated by ;, and finally the letter m. See the table on Wikipedia for the meaning of the numbers.
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-NOTES - FROM RITZ
-///////////////////////////////////////////////////////////////////////////////////////////////////
-TASK
-	The Adapter and Facade pattern should
-	be implemented in such as way to allow for adaptation between the classes and the Observer and Mediator
-	patterns. The Facade is used to give the impression that the classes offer a simple method of taking damage,
-	thereby hiding the Rock, Paper, Scissors complexity (i.e. you will have one function to allow for damage to
-	be taken by all units).
-	You will need to allow for the map to be updated after each turn as the units move through the map.
-	• The Observer and Mediator patterns will be used to organise the game play into a turn based playing
-	system.
-	• The Adapter and Facade patterns will be used as a layer of abstraction to allow for a simplified interface
-	to be used by the Observer and mediator classes.
+Here, \033 is the ESC character, ASCII 27. It is followed by [, then one or two numbers separated by ;,
+and finally the letter m. See the table on Wikipedia for the meaning of the numbers.
