@@ -1,11 +1,11 @@
-#include "Interface.h"
+#include "GameMaster.h"
 
-Interface::Interface()
+GameMaster::GameMaster()
 {
 	units = new Unit*[100];
 	cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
 }
-Interface::~Interface()
+GameMaster::~GameMaster()
 {
 	for (int j = 0; j < 100; j++)
 		delete units[j];
@@ -13,10 +13,9 @@ Interface::~Interface()
 	delete units;
 }
 
-void Interface::chooseHero()
+void GameMaster::chooseHero()
 {
 	int choice;
-	Unit * tempUnit;
 
 	cout << "Choose your hero!" << endl;
 		cout << "\t1) Mage" << endl;
@@ -40,18 +39,17 @@ void Interface::chooseHero()
 	switch (choice)
 	{
 		case 1:
-			tempUnit = playerFactory.produceMagic();
+			hero = playerFactory.produceMagic();
 			break;
 		case 2:
-			tempUnit = playerFactory.producePiercing();
+			hero = playerFactory.producePiercing();
 			break;
 		case 3:
-			tempUnit = playerFactory.produceBludgeoning();
+			hero = playerFactory.produceBludgeoning();
 			break;
 	}
 }
-
-void Interface::chooseCompanion()
+void GameMaster::chooseCompanion()
 {
 	int choice;
 	Unit * tempUnit;

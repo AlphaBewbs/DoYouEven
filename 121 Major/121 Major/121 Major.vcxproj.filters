@@ -42,7 +42,7 @@
     <ClInclude Include="UnitFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Interface.h">
+    <ClInclude Include="GameMaster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,7 +71,7 @@
     <ClCompile Include="Unit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Interface.cpp">
+    <ClCompile Include="GameMaster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
