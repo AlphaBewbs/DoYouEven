@@ -11,27 +11,25 @@ Student Number: 15075754
 
 ********************************************/
 
+/*
+This will function as a joint Observer-Mediator abstract class.
+The observer will help better observe the objects will the mediator enables communtication
+between the collegues(subjects)
+*/
+
 #ifndef GAMEMASTER_H
 #define GAMEMASTER_H
-
-#include "UnitFactory.h"
+#include "Unit.h"
 
 class GameMaster
 {
-	private:
-		PlayerFactory playerFactory;
-		MonsterFactory monsterFactory;
-		Unit** units;
-		Unit* hero;
+public:
+	virtual ~GameMaster(){};
 
-	public:
-		GameMaster();
-		~GameMaster();
-
-		void startGame();
-
-		void chooseHero();
-		void chooseCompanion();
+	virtual string state() = 0;
+	virtual void setState(string state) = 0;
+	virtual void attack() = 0;
+	virtual void update() = 0;
 };
 
 #endif

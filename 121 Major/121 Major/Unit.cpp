@@ -10,9 +10,8 @@ Name: Ritesh Doolabh
 Student Number: 15075754
 
 ********************************************/
-#include "Unit.h"     
-#include "Subject.h"
-#include "Party.h"
+#include "Unit.h"
+#include "GameMaster.h"
 #include <sstream>
 
 Unit::Unit(int _health, int _damage)
@@ -20,10 +19,7 @@ Unit::Unit(int _health, int _damage)
 	health = _health;
 	damage = _damage;
 
-	// = ++count; 	//PRE INCREMENT
-	//id = count++;
-
-	party = NULL; //Mediator obj
+	gameMaster = NULL;
 }
 
 string Unit::getDescription() const
@@ -45,30 +41,14 @@ void Unit::takeDamage(int _damage)
 		cout << "Unit # " << id << " has died...";
 }
 
-//Observer
+//Observer-Mediator
 Unit::~Unit()
 {
-	if(subject != NULL)
-		subject->detach(this);
+	if(gameMaster != NULL)
+		gameMaster->detach(this);
 }
 
-void Unit::registerSubject(Subject * _subject)
+Unit::registerGameMaster(GameMaster * _gameMaster)
 {
-	subject = subject;
-}
-
-//Mediator
-void Unit::setSquad(Party* _party)
-{
-	party = _party;
-}
-
-void Unit::changed()
-{
-	party->notify(this);
-}
-
-void Unit::inspect()
-{
-	changed();
+	gameMaster = _gameMaster'
 }

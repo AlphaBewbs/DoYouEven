@@ -22,18 +22,18 @@ class Bludgeoning : public Unit
 {
 	private:
 		//Observer
-		string state;	
+		string state;
 
 	public:
 		Bludgeoning(int, int); 	//Health, damage
-			
+
 		virtual string getUnit();
 		virtual string getSubClass();
 		virtual string getSkill();
 		void attack(Unit*);
 
 		//Prototype
-		virtual Bludgeoning* clone(); 
+		virtual Bludgeoning* clone();
 
 		//Observer
 		void update();
@@ -46,7 +46,7 @@ class Bludgeoning : public Unit
 class Soldier : public Bludgeoning
 {
 	public:
-		Soldier() :Bludgeoning(100, 8) 
+		Soldier() :Bludgeoning(100, 8)
 		{
 			subClass = "Soldier";
 			unit = "Player";
@@ -56,7 +56,7 @@ class Soldier : public Bludgeoning
 class Ogre : public Bludgeoning
 {
 	public:
-		Ogre() :Bludgeoning(120, 5) 
+		Ogre() :Bludgeoning(120, 5)
 		{
 			subClass = "Ogre";
 			unit = "Monster";

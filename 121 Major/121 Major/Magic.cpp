@@ -60,9 +60,13 @@ void Magic::update()
 	{
 		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;
 	}
-	else if(state == "Fighting")
+	else if (state == "Computer")
 	{
-		cout << "\tThe " << subClass << " is fighting with Magic!" << endl;	
+		cout << "It is the computer's turn..." << endl;
+	}
+	else if (state == "User")
+	{
+		cout << "It is your turn..." << endl;
 	}
 }
 
