@@ -22,7 +22,6 @@ class GameInterface
 		PlayerFactory playerFactory;
 		MonsterFactory monsterFactory;
 
-		
 
 	public:
 		GameInterface();
