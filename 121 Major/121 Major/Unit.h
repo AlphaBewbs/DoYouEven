@@ -53,7 +53,7 @@ class Unit
 		virtual Unit* clone() = 0;
 
 		//Observer-Mediator
-		virtual registerGameMaster(GameMaster*)
+		virtual void registerGameMaster(GameMaster*);
 };
 //static int count = 0;
 

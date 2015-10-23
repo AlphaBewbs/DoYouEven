@@ -6,7 +6,7 @@ MEMBERS
 Name: Kyle Erwin
 Student Number: 15015302
 
-Name: Ritesh Doolabh
+// Name: Ritesh Dolabh
 Student Number: 15075754
 
 ********************************************/
@@ -18,7 +18,7 @@ Student Number: 15075754
 
 class Overlord : public GameMaster
 {
-	private:
+	protected:
 		string state;
 
 		vector<Unit*> players;

@@ -48,7 +48,7 @@ Unit::~Unit()
 		gameMaster->detach(this);
 }
 
-Unit::registerGameMaster(GameMaster * _gameMaster)
+void Unit::registerGameMaster(GameMaster * _gameMaster)
 {
-	gameMaster = _gameMaster'
+	gameMaster = _gameMaster;
 }

@@ -23,13 +23,12 @@ between the collegues(subjects)
 
 class GameMaster
 {
-public:
-	virtual ~GameMaster(){};
+	public:
+		virtual ~GameMaster(){};
 
-	virtual string state() = 0;
-	virtual void setState(string state) = 0;
-	virtual void attack() = 0;
-	virtual void update() = 0;
+		virtual string state() = 0;
+		virtual void setState(string state) = 0;
+		//virtual void update() = 0;
 };
 
 #endif

@@ -21,14 +21,18 @@ class GameInterface
 	private:
 		PlayerFactory playerFactory;
 		MonsterFactory monsterFactory;
-		Unit** units;
-		Unit* hero;
+
+		
 
 	public:
 		GameInterface();
 		~GameInterface();
 
 		void startGame();
+
+		void move();
+		void createUnits();
+
 
 		void chooseHero();
 		void chooseCompanion();
