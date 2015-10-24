@@ -10,8 +10,17 @@ Name: Ritesh Doolabh
 Student Number: 15075754
 
 ********************************************/
-/*
-Adapter and chain are one
+/**
+*   @file Adapter.h
+*   @class Adapter
+*   @author Kyle Erwin and Ritesh Doolabh
+*   @version 1.8.10
+*
+*   @brief
+*
+*   @section Description
+*   This class provides the functionality of attacking a party
+*
 */
 
 #ifndef ADAPTER_H
@@ -23,9 +32,18 @@ Adapter and chain are one
 class Adapter : public Overlord
 {
   public:
-    void attack(vector<Unit*>, vector<Unit*>);
+
+    /**
+    *   The attack funtion for initiating an attack on a function.
+    *   @param vector<Unit*> passes the units to be addded to the party.
+    *   @param dmg passes the damage that needs to be dealt to the party array.
+    */
+    void attack(vector<Unit*>, dmg);
 
   private:
+    /**
+    * A private variable party which the units are added to that take the damage.
+    */
     Party party;
 };
 
