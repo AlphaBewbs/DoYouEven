@@ -25,10 +25,10 @@ void Team::addUnit(Unit *unit)
 	unit->registerGameMaster(this);
 }
 
-virtual void attack()
+void attack()
 {
 	for(int j = 0; j <= units.size(); j++)
-		unts[j].
+		units[j].
 }
 
 void Team::takeDamage(int dmg)

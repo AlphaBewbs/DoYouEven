@@ -6,7 +6,7 @@ MEMBERS
 Name: Kyle Erwin
 Student Number: 15015302
 
-// Name: Ritesh Dolabh
+Name: Ritesh Dolabh
 Student Number: 15075754
 
 ********************************************/
@@ -29,10 +29,10 @@ class Team
 		Team(GameMaster*);
 
 		virtual void initUnits() = 0;
-		virtual void update() = 0;
+		virtual void notify() = 0;
 		virtual void turn() = 0;
 		virtual void attack() = 0;
-		
+
 		virtual void addUnit(Unit*);
 		virtual void takeDamage(int);
 

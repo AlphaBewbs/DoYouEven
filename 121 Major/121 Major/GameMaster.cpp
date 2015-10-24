@@ -1,4 +1,6 @@
 #include "Gamemaster.h"
+#include "Team.h";
+
 #include <iostream>
 
 using namespace std;
@@ -8,12 +10,12 @@ GameMaster::GameMaster()
 
 }
 
-virtual void GameMaster::attachTeam(Team* inputTeam)
+void GameMaster::attachTeam(Team* inputTeam)
 {
     team = inputTeam;
 }
 
-virtual void GameMaster::detachTeam(Team* inputTeam)
+void GameMaster::detachTeam(Team* inputTeam)
 {
     team = NULL;
 }

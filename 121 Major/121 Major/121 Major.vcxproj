@@ -148,15 +148,15 @@
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Bludgeoning.h" />
-    <ClInclude Include="ConcreteParty.h" />
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="GameMaster.h" />
-    <ClInclude Include="Hero.h" />
+    <ClInclude Include="HeroTeam.h" />
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Master.h" />
     <ClInclude Include="Mediator.h" />
+    <ClInclude Include="MonsterTeam.h" />
     <ClInclude Include="Team.h" />
-    <ClInclude Include="Party.h" />
     <ClInclude Include="Piercing.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UnitFactory.h" />
@@ -166,10 +166,12 @@
     <ClCompile Include="Bludgeoning.cpp" />
     <ClCompile Include="GameInterface.cpp" />
     <ClCompile Include="GameMaster.cpp" />
-    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="HeroTeam.cpp" />
     <ClCompile Include="Magic.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Master.cpp" />
+    <ClCompile Include="MonsterTeam.cpp" />
     <ClCompile Include="Team.cpp" />
     <ClCompile Include="Piercing.cpp" />
     <ClCompile Include="Unit.cpp" />
