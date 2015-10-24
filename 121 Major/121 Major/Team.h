@@ -10,29 +10,34 @@ Student Number: 15015302
 Student Number: 15075754
 
 ********************************************/
-#ifndef OVERLORD_H
-#define OVERLORD_H
+#ifndef TEAM_H
+#define TEAM_H
 
 #include "GameMaster.h"
 #include <vector>
 
-class Overlord : public GameMaster
+//OBSERVER
+
+class Team
 {
 	protected:
-		string state;
 
 		vector<Unit*> players;
 		vector<Unit*> monsters;
 
 	public:
-		void attach(Unit *);
-		void detach(Unit *);
-		void notify();
 
-		string state();
-		void setState(string);
-
-		//CHAIN OF RESPOSIBLITY
+		Team(inputGameMaster : GameMaster *)
+		Team()
+		void initUnits();
+		void update();
+		void attack();
+		void turn();
+		void takeDamage(int damage);
+		void addUnit(Unit * inputUnit);
+		Unit * getUnitAt(int index);
+		void setGameMaster(GameMaster *);
+		int getSize();
 
 }
 

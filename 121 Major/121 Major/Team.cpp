@@ -12,9 +12,9 @@ Student Number: 15075754
 ********************************************/
 
 
-#include "Overlord.h"
+#include "Team.h"
 
-void Overlord::attach(Unit *unit)
+void Team::attach(Unit *unit)
 {
 	string type = unit.getSubClass();
 
@@ -26,7 +26,7 @@ void Overlord::attach(Unit *unit)
 	unit->registerGameMaster(this);
 }
 
-void Overlord::detach(Unit *unit)
+void Team::detach(Unit *unit)
 {
 	if (type == "Mage" || type == "Soldier" || type == "Thief")
 		for(int i = 0; i < players.size(); ++i)
@@ -38,7 +38,7 @@ void Overlord::detach(Unit *unit)
 				monsters.erase(monsters.begin() + i);
 }
 
-void Overlord::notify()
+void Team::notify()
 {
 	for(int i = 0; i < players.size(); ++i)
 		players[i]->update();
@@ -47,12 +47,12 @@ void Overlord::notify()
 		monsters[i]->update();
 }
 
-string Overlord::state()
+string Team::state()
 {
 	return state;
 }
 
-void Overlord::setState(string _state)
+void Team::setState(string _state)
 {
 	state = _state;
 	notify();

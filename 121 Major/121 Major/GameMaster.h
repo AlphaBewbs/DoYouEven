@@ -10,25 +10,26 @@ Name: Ritesh Doolabh
 Student Number: 15075754
 
 ********************************************/
-
-/*
-This will function as a joint Observer-Mediator abstract class.
-The observer will help better observe the objects will the mediator enables communtication
-between the collegues(subjects)
-*/
-
+//This is our mediator
 #ifndef GAMEMASTER_H
 #define GAMEMASTER_H
 #include "Unit.h"
 
 class GameMaster
 {
+	protected:
+		string state;
 	public:
 		virtual ~GameMaster(){};
 
 		virtual string state() = 0;
 		virtual void setState(string state) = 0;
-		//virtual void update() = 0;
+		string state();
+		void setState(string);
+
+		void attach(Unit *);
+		void detach(Unit *);
+		void notify();
 };
 
 #endif
