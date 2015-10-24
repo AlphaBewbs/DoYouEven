@@ -21,23 +21,24 @@ Student Number: 15075754
 class Team
 {
 	protected:
-
-		vector<Unit*> players;
-		vector<Unit*> monsters;
+		GameMaster* gameMaster;
+		vector<Unit*> units;
 
 	public:
+		Team();
+		Team(GameMaster*);
 
-		Team(inputGameMaster : GameMaster *)
-		Team()
-		void initUnits();
-		void update();
-		void attack();
-		void turn();
-		void takeDamage(int damage);
-		void addUnit(Unit * inputUnit);
-		Unit * getUnitAt(int index);
-		void setGameMaster(GameMaster *);
-		int getSize();
+		virtual void initUnits() = 0;
+		virtual void update() = 0;
+		virtual void turn() = 0;
+		virtual void attack() = 0;
+		
+		virtual void addUnit(Unit*);
+		virtual void takeDamage(int);
+
+		virtual Unit* getUnitAt(int);
+		virtual int getSize();
+		virtual void setGameMaster(GameMaster*);
 
 }
 

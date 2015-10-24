@@ -10,50 +10,51 @@ Name: Ritesh Doolabh
 Student Number: 15075754
 
 ********************************************/
-
-
 #include "Team.h"
 
-void Team::attach(Unit *unit)
+Team()
+
+Team(GameMaster*_gameMaster)
 {
-	string type = unit.getSubClass();
+	gameMaster = _gameMaster;
+}
 
-	if (type == "Mage" || type == "Soldier" || type == "Thief")
-		players.push_back(unit);
-	else
-		monsters.push_back(unit);
-
+void Team::addUnit(Unit *unit)
+{
+	units.push_back(unit);
 	unit->registerGameMaster(this);
 }
 
-void Team::detach(Unit *unit)
+virtual void attack()
 {
-	if (type == "Mage" || type == "Soldier" || type == "Thief")
-		for(int i = 0; i < players.size(); ++i)
-			if(unit == players[i])
-				players.erase(players.begin() + i);
-	else
-		for(int i = 0; i < monsters.size(); ++i)
-			if(unit == monsters[i])
-				monsters.erase(monsters.begin() + i);
+	for(int j = 0; j <= units.size(); j++)
+		unts[j].
 }
 
-void Team::notify()
+void Team::takeDamage(int dmg)
 {
-	for(int i = 0; i < players.size(); ++i)
-		players[i]->update();
+	Unit* unit = getUnitAt(0);
+	int count = 1;
 
-	for(int i = 0; i < monsters.size(); ++i)
-		monsters[i]->update();
+	do
+	{
+			unit = getUnitAt(count);
+			count++;
+
+	}while(unit.takeDamage(dmg) > 0);
 }
 
-string Team::state()
+int Team::getSize()
 {
-	return state;
+	return units.size();
 }
 
-void Team::setState(string _state)
+Unit* Team::getUnitAt(int position)
 {
-	state = _state;
-	notify();
+	return units.at(position)
+}
+
+void Team::setGameMaster(GameMaster* _gameMaster)
+{
+	gameMaster = _gameMaster;
 }

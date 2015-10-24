@@ -151,6 +151,7 @@
     <ClInclude Include="ConcreteParty.h" />
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="GameMaster.h" />
+    <ClInclude Include="Hero.h" />
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Mediator.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="Bludgeoning.cpp" />
     <ClCompile Include="GameInterface.cpp" />
     <ClCompile Include="GameMaster.cpp" />
+    <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Magic.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
