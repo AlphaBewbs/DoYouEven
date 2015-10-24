@@ -10,16 +10,23 @@ Name: Ritesh Doolabh
 Student Number: 15075754
 
 ********************************************/
+/*
+Adapter and chain are one
+*/
 
 #ifndef ADAPTER_H
 #define ADAPTER_H
 
+#include "Party.h"
 #include "Overlord.h"
 
 class Adapter : public Overlord
 {
   public:
-    void attack(Unit*);
+    void attack(vector<Unit*>, vector<Unit*>);
+
+  private:
+    Party party;
 };
 
 #endif

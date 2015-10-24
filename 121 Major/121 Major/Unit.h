@@ -31,7 +31,6 @@ class Unit
 		//Observer-Mediator
 		GameMaster* gameMaster;
 
-
 	public:
 		Unit(int, int);
 
@@ -42,7 +41,7 @@ class Unit
 		virtual string getSkill() = 0;	//To return just the type
 
 		virtual void attack(Unit*) = 0;
-		virtual void takeDamage(int);
+		virtual int takeDamage(int);
 		/*
 		magic deals more damage to bludgeoning
 		bludgeoning deal more damage to piercing

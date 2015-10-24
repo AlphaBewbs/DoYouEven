@@ -148,12 +148,14 @@
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Bludgeoning.h" />
+    <ClInclude Include="ConcreteParty.h" />
     <ClInclude Include="GameInterface.h" />
     <ClInclude Include="GameMaster.h" />
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Mediator.h" />
     <ClInclude Include="Overlord.h" />
+    <ClInclude Include="Party.h" />
     <ClInclude Include="Piercing.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UnitFactory.h" />

@@ -13,16 +13,6 @@ Student Number: 15075754
 
 #include "Overlord.h"
 
-void Overlord::add(Unit* unit)
-{
-	string type = unit.getSubClass();
-	if (type == "Mage" || type == "Soldier" || type == "Thief")
-		players.push_back(unit);
-	else
-		monsters.push_back(unit);
-
-}
-
 void Overlord::attach(Unit *unit)
 {
 	string type = unit.getSubClass();

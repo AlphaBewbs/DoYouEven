@@ -31,6 +31,9 @@ class Overlord : public GameMaster
 
 		string state();
 		void setState(string);
+
+		//CHAIN OF RESPOSIBLITY
+
 }
 
 #endif

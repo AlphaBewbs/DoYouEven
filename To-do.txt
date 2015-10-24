@@ -8,9 +8,6 @@ COMPLETED
 TODO
 	tell the observer when the pc turn computer turn
 
-	We need to put output in event() act()
-
-	AttackParty notify function needs atttention
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 NOTES - FROM KYLE

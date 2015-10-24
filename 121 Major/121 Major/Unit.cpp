@@ -33,12 +33,22 @@ string Unit::getDescription() const
 	return ss.str();
 }
 
-void Unit::takeDamage(int _damage)
+int Unit::takeDamage(int _damage)
 {
 	health -= _damage;
 
 	if (health <= 0)
-		cout << "Unit # " << id << " has died...";
+	{
+		const int CARRYOVER = health * -1;
+		cout << "Unit # " << id << " has died..." << endl;
+		health = 0;
+		return CARRYOVER;
+	}
+	else
+	{
+		cout << "Unit # " << id << " took " << _damage << " points of damage" << endl;
+		return 0;
+	}
 }
 
 //Observer-Mediator
