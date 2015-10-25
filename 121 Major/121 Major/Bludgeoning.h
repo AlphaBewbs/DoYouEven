@@ -87,12 +87,18 @@ class Bludgeoning : public Unit
 *		@brief This is a class that provides a soldier for Bludgeoning
 *
 *		@section Description
-*		This class provides the initialisation fo the soldier for the Bludgeoning type of Unit.
+*		This class provides the initialisation for the soldier for the Bludgeoning type of Unit.
 */
 
 class Soldier : public Bludgeoning
 {
 	public:
+		/**
+		*		The health and damage numbers are pre-known and are as such passed to
+		*		the constructor.
+		*		The sublass and unit variables are also initialised to their respective
+		*		values.
+		*/
 		Soldier() :Bludgeoning(100, 8)
 		{
 			subClass = "Soldier";
@@ -103,18 +109,24 @@ class Soldier : public Bludgeoning
 
 /**
 *		@file Bludgeoning.h
-* 	@class Soldier
+* 	@class Ogre
 *		@author Kyle Erwin and Ritesh Doolabh
 *		@version 1.8.10
 *
-*		@brief This is a class that provides a soldier for Bludgeoning
+*		@brief This is a class that provides an Ogre for Bludgeoning
 *
 *		@section Description
-*		This class provides the initialisation fo the soldier for the Bludgeoning type of Unit.
+*		This class provides the initialisation for the Ogre for the Bludgeoning type of Unit.
 */
 class Ogre : public Bludgeoning
 {
 	public:
+		/**
+		*		The health and damage numbers are pre-known and are as such passed to
+		*		the constructor.
+		*		The sublass and unit variables are also initialised to their respective
+		*		values.
+		*/
 		Ogre() :Bludgeoning(120, 5)
 		{
 			subClass = "Ogre";
