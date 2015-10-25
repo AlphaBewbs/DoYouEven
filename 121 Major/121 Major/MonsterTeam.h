@@ -24,6 +24,6 @@ class MonsterTeam : public Team
     void turn();
     void notify();
     void attack();
-}
+};
 
 #endif

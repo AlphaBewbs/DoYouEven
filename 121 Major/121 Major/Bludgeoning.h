@@ -20,7 +20,8 @@ Student Number: 15075754
 *		@brief This is a class that stores units of the Bludgeoning type.
 *
 *		@section Description
-*		This class provides the functionality of attacking a party.
+*		This class provides access to the attribules of all the Bludgeoning units
+*		and access to clone them.
 *
 */
 #ifndef BLUDGEONING_H
