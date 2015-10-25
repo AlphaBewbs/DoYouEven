@@ -42,5 +42,5 @@ void HeroTeam::update()
 
 void HeroTeam::attack()
 {
-
+	for
 }

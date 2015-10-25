@@ -37,12 +37,13 @@ string Piercing::getSubClass()
 	return subClass;
 }
 
-void Piercing::attack(Unit* enemy)
+//@CHANGED
+int Piercing::attack(Unit* enemy)
 {
 	if (enemy->getSkill() == "Magic")
-		enemy->takeDamage(damage + 3);
+		return enemy->takeDamage(damage + 3);
 	else
-		enemy->takeDamage(damage);
+		return enemy->takeDamage(damage);
 }
 
 //Prototype

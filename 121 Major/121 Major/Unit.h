@@ -40,7 +40,8 @@ class Unit
 		virtual string getSubClass() = 0;	//To return just the skill
 		virtual string getSkill() = 0;	//To return just the type
 
-		virtual void attack(Unit*) = 0;
+		//@CHANGED made attack return an int to help with master attack function
+		virtual int attack(Unit*) = 0;
 		virtual int takeDamage(int);
 		/*
 		magic deals more damage to bludgeoning

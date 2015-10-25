@@ -22,18 +22,20 @@ class Magic : public Unit
 {
 	private:
 		//Observer
-		string state;	
+		string state;
 
 	public:
 		Magic(int, int); 	//Health, damage
-			
+
 		virtual string getUnit();
 		virtual string getSubClass();
 		virtual string getSkill();
-		void attack(Unit*);
+
+		//@CHANGED 
+		int attack(Unit*);
 
 		//Prototype
-		virtual Magic* clone(); 
+		virtual Magic* clone();
 
 		//Observer
 		void update();
@@ -46,17 +48,17 @@ class Magic : public Unit
 class Mage : public Magic
 {
 	public:
-		Mage() :Magic(80, 5) 
+		Mage() :Magic(80, 5)
 		{
 			subClass = "Mage";
 			unit = "Player";
-		} 
+		}
 };
 
 class Elemental : public Magic
 {
 	public:
-		Elemental() :Magic(85, 4) 
+		Elemental() :Magic(85, 4)
 		{
 			subClass = "Elemental";
 			unit = "Monster";

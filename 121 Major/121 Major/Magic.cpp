@@ -37,12 +37,12 @@ string Magic::getSubClass()
 	return subClass;
 }
 
-void Magic::attack(Unit* enemy)
+int Magic::attack(Unit* enemy)
 {
 	if (enemy->getSkill() == "Bludgeoning" )
-		enemy->takeDamage(damage + 3);
+		return enemy->takeDamage(damage + 3);
 	else
-		enemy->takeDamage(damage);
+		return enemy->takeDamage(damage);
 }
 
 //Prototype

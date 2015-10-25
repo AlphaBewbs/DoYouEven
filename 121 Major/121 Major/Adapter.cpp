@@ -12,11 +12,3 @@ Student Number: 15075754
 ********************************************/
 
 #include "Adapter.h"
-
-void Adapter::attack(vector<Unit*> units, int dmg)
-{
-  for(int i = 0; i < units.size(); ++i)
-    party.add(units[i]);
-
-  party.attack(dmg);
-}

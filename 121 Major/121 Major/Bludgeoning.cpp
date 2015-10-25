@@ -37,12 +37,13 @@ string Bludgeoning::getSubClass()
 	return subClass;
 }
 
-void Bludgeoning::attack(Unit* enemy)
+//@CHANGED see header file
+int Bludgeoning::attack(Unit* enemy)
 {
 	if (enemy->getSkill() == "Piercing")
-		enemy->takeDamage(damage + 3);
+		return enemy->takeDamage(damage + 3);
 	else
-		enemy->takeDamage(damage);
+		return enemy->takeDamage(damage);
 }
 
 //Prototype

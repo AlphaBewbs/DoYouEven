@@ -31,17 +31,18 @@ void attack()
 		units[j].
 }
 
-void Team::takeDamage(int dmg)
+void Team::takeDamage(Unit* unitAttacker)
 {
-	Unit* unit = getUnitAt(0);
-	int count = 1;
+	Unit* unitDefender = 0;
+	int count = 0;
 
 	do
 	{
-			unit = getUnitAt(count);
-			count++;
+		unitDefender = getUnitAt(count);
+		dmg = unitAttacker->attack(unitDefender);
+		count++;
 
-	}while(unit.takeDamage(dmg) > 0);
+	}while(dmg > 0);
 }
 
 int Team::getSize()

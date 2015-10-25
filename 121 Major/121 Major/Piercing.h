@@ -22,18 +22,20 @@ class Piercing : public Unit
 {
 	private:
 		//Observer
-		string state;	
+		string state;
 
 	public:
 		Piercing(int, int); 	//Health, damage
-			
+
 		virtual string getUnit();
 		virtual string getSubClass();
 		virtual string getSkill();
-		void attack(Unit*);
+
+		//@CHANGED
+		int attack(Unit*);
 
 		//Prototype
-		virtual Piercing* clone(); 
+		virtual Piercing* clone();
 
 		//Observer
 		void update();
@@ -46,7 +48,7 @@ class Piercing : public Unit
 class Thief : public Piercing
 {
 	public:
-		Thief() : Piercing(60, 10) 
+		Thief() : Piercing(60, 10)
 		{
 			subClass = "Thief";
 			unit = "Player";
@@ -57,7 +59,7 @@ class Thief : public Piercing
 class Goblin : public Piercing
 {
 	public:
-		Goblin() : Piercing(50, 12) 
+		Goblin() : Piercing(50, 12)
 		{
 			subClass = "Goblin";
 			unit = "Monster";

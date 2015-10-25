@@ -34,7 +34,7 @@ class Team
 		virtual void attack() = 0;
 
 		virtual void addUnit(Unit*);
-		virtual void takeDamage(int);
+		virtual void takeDamage(Unit *);
 
 		virtual Unit* getUnitAt(int);
 		virtual int getSize();
