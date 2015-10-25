@@ -33,26 +33,31 @@ class GameMaster
 {
 	protected:
 		int turn;
-		Team* team;
+		Team* heros;
+		Team* momster;
 
 	public:
 		GameMaster();
 
 		void playGame();
 
-		virtual	void attachTeam(Team* ) = 0;
-		virtual void detachTeam(Team*  = 0;
+		virtual	void attachTeam(Team*) = 0;
+		virtual void detachTeam(Team*)  = 0;
 		virtual bool moveUnit(Unit*, char) = 0;
 		virtual void attack(Unit*, Unit*) = 0;
 
-		Team* getTeamAt(int);
+		//@CHANGED This getTeamAt function is removed
+		//Team* getTeamAt(int);
+
 		virtual void printMap() = 0;
 		virtual void addToMap(Unit* , int , int) = 0;
 
 		virtual void notify(Team*) = 0;
 		virtual Point locateTeam(Team*) = 0;
-		virtual vector<int> requestFreeSpace() = 0;
-		virtual void removeDestroyedUnits() = 0;
+
+		//@CHANGED This getTeamAt function is removed
+		//virtual vector<int> requestFreeSpace() = 0;
+		//virtual void removeDestroyedUnits() = 0;
 
 		bool gameOver();
 };
