@@ -2,16 +2,19 @@
 COMPLETED
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-@TODO What happens each in a turn
-	Ask what direction you need to Move
-	check if you can attack
-	if not end turn
-
+@TODO
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @NOTE - FROM KYLE
-	Finish game interface, make it look pretty
-	the turn based system and computer Player
+	Finish game interface, make it look pretty...
+	Randomize the monsers. create a general for taking turns. this will be
+	helped with Master class wich should then notify the teams and then notify the units and
+	output a small message
+	What happens each in a turn
+		Ask what direction you need to Move
+		check if you can attack
+		if not end turn
+
 	output the map with character symbols
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @NOTE - FROM RITZ
