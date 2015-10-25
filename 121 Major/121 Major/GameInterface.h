@@ -39,6 +39,10 @@ class GameInterface
 		PlayerFactory playerFactory;
 		MonsterFactory monsterFactory;
 
+		int playerSize, monsterSize;
+
+		Unit** playerUnits = new Unit*[playerSize];
+		Unit** monsterUnits = new Unit*[monsterSize];
 
 	public:
 		/**
