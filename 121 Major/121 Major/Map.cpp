@@ -71,3 +71,16 @@ bool Map::Move(int x, int y, int prevX, int prevY)
   else
     return false;
 }
+
+bool Map::availableSpace(int x, int y)
+{
+	if(y > mapSizeY)
+	  return false;
+	else(x > mapSizeX)
+	  return false;
+
+	if(MapContents[x][y] == ' ')
+	  return true;
+	else
+	  return false;
+}

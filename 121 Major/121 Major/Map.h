@@ -13,6 +13,7 @@ public:
     Map(char*);
     void printMap();
 
+	bool availableSpace(int, int);
     bool Move(int, int, int, int);
     void setMap();
 
