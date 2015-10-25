@@ -131,6 +131,7 @@ void GameInterface::chooseHero()
 		}
 		//Tells the master to aadd a unit to the player team
 		master.addPlayerTeam(hero);
+		master.addToMap(hero);
 	}
 }
 

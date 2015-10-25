@@ -34,12 +34,14 @@ class Master : public GameMaster
 		//Unit* getUnitAt(int index);
 
 		virtual void printMap();
-		virtual void addToMap(Unit* inputUnit);
+		virtual void addToMap(Unit*);
 
-		//@NOTE This is new
-		virtual void addToMap(Team*);
+		//@CHANGED We don't need this
+		//virtual void addToMap(Team*);
+
 		void addMonsterTeam(Unit*);
 		void addPlayerTeam(Unit*);
+		void moveMonsters()
 
 		virtual void notify(Unit*);
 		virtual Point locateUnit(Unit*);
