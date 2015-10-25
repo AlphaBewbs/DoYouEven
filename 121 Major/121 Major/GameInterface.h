@@ -11,6 +11,19 @@ Student Number: 15075754
 
 ********************************************/
 
+
+/**
+*		@file GameInterface.h
+*		@class GameInterface
+*		@author Kyle Erwin and Ritesh Doolabh
+*		@version 1.8.10
+*
+*		@brief This is a class that stores units of the Bludgeoning type.
+*
+*		@section Description
+*		This class provides the functionality of attacking a party.
+*
+*/
 #ifndef GAMEINTERFACE_H
 #define GAMEINTERFACE_H
 
@@ -19,21 +32,51 @@ Student Number: 15075754
 class GameInterface
 {
 	private:
+		/**
+		*		The private member variables that form part of the abstract factory
+		*		design pattern to create Units of either Monster or Player.
+		*/
 		PlayerFactory playerFactory;
 		MonsterFactory monsterFactory;
 
 
 	public:
+		/**
+		*		The constructor that creats a dynamic array for storing all of the units.
+		*/
 		GameInterface();
+
+		/**
+		*		The destructor to de-allocate memory.
+		*/
 		~GameInterface();
 
+		/**
+		*		@TODO implement startGame function
+		*/
 		void startGame();
 
+		/**
+		*		@TODO implememnt the move funtion
+		*/
 		void move();
+
+		/**
+		*		This funtion uses the abstract factory design pattern to create units
+		*		of the desired type.
+		*/
 		void createUnits();
 
-
+		/**
+		*		This function allows the user to choose the kind of unit they want
+		* 	their hero to be.
+		*/
 		void chooseHero();
+
+		/**
+		*		This function allows the user to choose the type of units they want
+		*		their companions to be.
+		*/
 		void chooseCompanion();
 };
 
