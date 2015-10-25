@@ -1,0 +1,72 @@
+﻿Build started 2015/10/23 6:43:58 PM.
+     1>Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bludgeoning.cpp GameInterface.cpp GameMaster.cpp Magic.cpp Main.cpp Overlord.cpp Piercing.cpp Unit.cpp
+         Unit.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(22): error C2065: 'gameMaster': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(46): error C2600: 'Unit::~Unit': cannot define a compiler-generated special member function (must be declared in the class first)
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(47): error C2065: 'gameMaster': undeclared identifier
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(47): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): error C2065: 'gameMaster': undeclared identifier
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): error C2227: left of '->detach' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): note: type is 'unknown-type'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
+         Piercing.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(58): error C2065: 'subject': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(58): error C2227: left of '->state' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(58): note: type is 'unknown-type'
+         Overlord.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(16): error C2628: 'Overlord' followed by 'void' is illegal (did you forget a ';'?)
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): error C2259: 'Overlord': cannot instantiate abstract class
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): note: due to following members:
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): note: 'void GameMaster::attack(void)': is abstract
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(38): note: see declaration of 'GameMaster::attack'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): note: 'void GameMaster::update(void)': is abstract
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(39): note: see declaration of 'GameMaster::update'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): error C2556: 'Overlord Overlord::notify(Unit *)': overloaded function differs only by return type from 'void Overlord::notify(Unit *)'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.h(22): note: see declaration of 'Overlord::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(28): error C2228: left of '.getSubClass' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(28): note: type is 'Unit *'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(28): note: did you intend to use '->' instead?
+         Main.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+         Magic.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\magic.cpp(58): error C2065: 'subject': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\magic.cpp(58): error C2227: left of '->state' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\magic.cpp(58): note: type is 'unknown-type'
+         GameMaster.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+         GameInterface.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+         Bludgeoning.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\bludgeoning.cpp(58): error C2065: 'subject': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\bludgeoning.cpp(58): error C2227: left of '->state' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\bludgeoning.cpp(58): note: type is 'unknown-type'
+         Generating Code...
+     1>Done Building Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.06
