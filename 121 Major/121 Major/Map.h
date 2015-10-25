@@ -16,6 +16,10 @@ public:
     bool Move(int, int, int, int);
     void setMap();
 
+    //@CHANGED
+    int getY() {return mapSizeY};
+    int getX() {return mapSizeX};
+
 
 };
 #endif

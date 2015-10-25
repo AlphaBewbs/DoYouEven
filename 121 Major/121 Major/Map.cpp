@@ -16,9 +16,12 @@ Map::Map(char* fileName)
 
 Map::~Map()
 {
-  /**
-   * @TODO Fill in Destructor here
-   */
+  //@CHANGED
+  for (size_t i = 0; i < size; i++)
+    delete MapContents[i];
+
+  delete [] MapContents;
+
 }
 
 void Map::setMap()

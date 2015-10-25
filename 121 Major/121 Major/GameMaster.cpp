@@ -5,17 +5,4 @@
 
 using namespace std;
 
-GameMaster::GameMaster()
-{
-
-}
-
-void GameMaster::attachTeam(Team* inputTeam)
-{
-    team = inputTeam;
-}
-
-void GameMaster::detachTeam(Team* inputTeam)
-{
-    team = NULL;
-}
+//@NOTE Do we really need this file
