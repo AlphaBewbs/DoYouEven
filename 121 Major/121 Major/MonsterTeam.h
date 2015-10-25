@@ -10,10 +10,11 @@ Name: Ritesh Dolabh
 Student Number: 15075754
 
 ********************************************/
-#ifndef TEAM_H
-#define TEAM_H
+#ifndef MONSTERTEAM_H
+#define MONSTERTEAM_H
 
 #include "Team.h"
+#include "UnitFactory.h"
 
 //CONCRETE OBSERVER
 

@@ -22,7 +22,7 @@ void MonsterTeam::initUnits()
 	MonsterFactory MonsterFactory;
   Unit* tempUnit;
 
-	tempUnit = mosFactory.produceMagic();
+	tempUnit = MonsterFactory.produceMagic();
   addUnit(tempUnit);
 	tempUnit = MonsterFactory.producePiercing();
   addUnit(tempUnit);

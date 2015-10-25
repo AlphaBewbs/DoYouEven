@@ -12,7 +12,6 @@ Student Number: 15075754
 ********************************************/
 #include "Team.h"
 
-Team()
 
 Team(GameMaster*_gameMaster)
 {

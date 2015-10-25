@@ -154,7 +154,6 @@
     <ClInclude Include="Magic.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Master.h" />
-    <ClInclude Include="Mediator.h" />
     <ClInclude Include="MonsterTeam.h" />
     <ClInclude Include="Team.h" />
     <ClInclude Include="Piercing.h" />

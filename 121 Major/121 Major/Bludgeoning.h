@@ -27,7 +27,6 @@ Student Number: 15075754
 #define BLUDGEONING_H
 
 #include "Unit.h"
-#include "Environment.h"
 
 using namespace std;
 
@@ -59,7 +58,7 @@ class Bludgeoning : public Unit
 		* 	The function returns the type of skill that the unit is.
 		*/
 		virtual string getSkill();
-		void attack(Unit*);
+		int attack(Unit*);
 
 		/**
 		*		The function uses the prototype design pattern to clone the current unit

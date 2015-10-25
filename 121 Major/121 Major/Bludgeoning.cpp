@@ -56,7 +56,7 @@ Bludgeoning* Bludgeoning::clone()
 //Observer
 void Bludgeoning::update()
 {
-	state = subject->state();
+	//state = subject->state();
 	if(state == "")
 	{
 		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;

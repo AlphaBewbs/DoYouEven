@@ -30,9 +30,6 @@
     <ClInclude Include="UnitFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mediator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
