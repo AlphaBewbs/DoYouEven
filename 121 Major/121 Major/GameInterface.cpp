@@ -78,17 +78,18 @@ void GameInterface::createUnits()
 
 void GameInterface::chooseHero()
 {
-	int choice;
+	int choice, size;
+
 	cout << "Time to choose your team!" << endl;
 	cout << "How many heros would you like?";
-	cin >> playerSize;
+	cin >> size;
 
 	while(playerSize <= 0 || playerSize > 5)
 	{
 		cout << "err... ummm... How about a number betwean 1 and 5?" << endl;
 		cout << "Lets try that again" << endl;
 		cout << "How many heros would you like?";
-		cin >> playerSize;
+		cin >> size;
 	}
 	cout << endl << "Excellent! Lets build your team!" << endl << endl;
 
@@ -113,6 +114,9 @@ void GameInterface::chooseHero()
 		}
 		//@NOTE MAYBE PUT SOME IF STATEMENTS TO MAKE THIS COOLER
 		cout << endl << "you chose that one... really? well okay... ONWARD THEN!" << endl;
+
+		Unit* hero = new Unit;
+
 		switch (choice)
 		{
 			case 1:
@@ -125,6 +129,8 @@ void GameInterface::chooseHero()
 				hero = playerFactory.produceBludgeoning();
 				break;
 		}
+		//Tells the master to aadd a unit to the player team
+		master.addPlayerTeam(hero);
 	}
 }
 
