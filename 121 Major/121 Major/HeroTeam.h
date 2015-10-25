@@ -10,20 +10,21 @@ Name: Ritesh Dolabh
 Student Number: 15075754
 
 ********************************************/
-#ifndef TEAM_H
-#define TEAM_H
+#ifndef HEROTEAM_H
+#define HEROTEAM_H
 
 #include "Team.h"
+#include "UnitFactory.h"
 
 //CONCRETE OBSERVER
 
 class HeroTeam : public Team
 {
-    HumanTeam(GameMaster *);
+    HeroTeam(GameMaster *);
     void initUnits();
     void turn();
     void notify();
     void attack();
-}
+};
 
 #endif

@@ -40,6 +40,6 @@ class Team
 		virtual int getSize();
 		virtual void setGameMaster(GameMaster*);
 
-}
+};
 
 #endif

@@ -25,8 +25,8 @@ struct Point
 {
 	int x;
 	int y;
-	int getX(){return x};
-	int getY(){return Y};
+	int getX() { return x; };
+	int getY() { return y; };
 };
 
 class GameMaster

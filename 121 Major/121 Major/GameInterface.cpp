@@ -7,10 +7,13 @@ GameInterface::GameInterface()
 }
 GameInterface::~GameInterface()
 {
-	for (int j = 0; j < 100; j++)
-		delete units[j];
+	for (int j = 0; j < playerSize; j++)
+		delete playerUnits[j];
+	delete playerUnits;
 
-	delete units;
+	for (int j = 0; j < monsterSize; j++)
+		delete monsterUnits[j];
+	delete monsterUnits;
 }
 
 void GameInterface::createUnits()
@@ -75,38 +78,59 @@ void GameInterface::createUnits()
 
 void GameInterface::chooseHero()
 {
-	int choice;
+	int choice, size;
 
-	cout << "Choose your hero!" << endl;
-		cout << "\t1) Mage" << endl;
-		cout << "\t2) Thief" << endl;
-		cout << "\t3) Soldier" << endl;
+	cout << "Time to choose your team!" << endl;
+	cout << "How many heros would you like?";
+	cin >> size;
 
-	cin >> choice;
-
-	while (choice < 1 || choice > 3)
+	while(playerSize <= 0 || playerSize > 5)
 	{
-		cout << "Thats not a hero..." << endl;
-		cout << "Choose your hero!" << endl;
+		cout << "err... ummm... How about a number betwean 1 and 5?" << endl;
+		cout << "Lets try that again" << endl;
+		cout << "How many heros would you like?";
+		cin >> size;
+	}
+	cout << endl << "Excellent! Lets build your team!" << endl << endl;
+
+	for (size_t i = 0; i < playerSize; i++)
+	{
+		cout << "Choose your hero number " << i << "!" << endl;
 			cout << "\t1) Mage" << endl;
 			cout << "\t2) Thief" << endl;
 			cout << "\t3) Soldier" << endl;
 
 		cin >> choice;
-	}
 
-	cout << endl << "you chose that one... really? well okay... ONWARD THEN!" << endl;
-	switch (choice)
-	{
-		case 1:
-			hero = playerFactory.produceMagic();
-			break;
-		case 2:
-			hero = playerFactory.producePiercing();
-			break;
-		case 3:
-			hero = playerFactory.produceBludgeoning();
-			break;
+		while (choice < 1 || choice > 3)
+		{
+			cout << "Thats not a hero..." << endl;
+			cout << "Choose your hero!" << endl;
+				cout << "\t1) Mage" << endl;
+				cout << "\t2) Thief" << endl;
+				cout << "\t3) Soldier" << endl;
+
+			cin >> choice;
+		}
+		//@NOTE MAYBE PUT SOME IF STATEMENTS TO MAKE THIS COOLER
+		cout << endl << "you chose that one... really? well okay... ONWARD THEN!" << endl;
+
+		Unit* hero = new Unit;
+
+		switch (choice)
+		{
+			case 1:
+				hero = playerFactory.produceMagic();
+				break;
+			case 2:
+				hero = playerFactory.producePiercing();
+				break;
+			case 3:
+				hero = playerFactory.produceBludgeoning();
+				break;
+		}
+		//Tells the master to aadd a unit to the player team
+		master.addPlayerTeam(hero);
 	}
 }
 

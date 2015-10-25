@@ -35,12 +35,11 @@ void HeroTeam::turn()
 
 }
 
-void HeroTeam::update()
+void HeroTeam::notify()
 {
 
 }
 
 void HeroTeam::attack()
 {
-	for
 }

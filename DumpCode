@@ -1,0 +1,15 @@
+void Move(char input)
+{
+  input = input.toUpper();
+
+  switch(input)
+  {
+    case 'W': y++; break;
+    case 'S': y--; break;
+    case 'D': x++; break;
+    case 'A': x--; break;
+  }
+
+  setHero(x, y);
+
+}

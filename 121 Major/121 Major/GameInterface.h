@@ -28,6 +28,7 @@ Student Number: 15075754
 #define GAMEINTERFACE_H
 
 #include "UnitFactory.h"
+#include "Master.h"
 
 class GameInterface
 {
@@ -39,6 +40,15 @@ class GameInterface
 		PlayerFactory playerFactory;
 		MonsterFactory monsterFactory;
 
+
+		/*@NOTE DONT NEED THIS ANYMORE
+		int playerSize, monsterSize;
+
+		Unit** playerUnits = new Unit*[playerSize];
+		Unit** monsterUnits = new Unit*[monsterSize];*/
+
+		//@NOTE new
+		Master master;
 
 	public:
 		/**
