@@ -4,6 +4,8 @@
 #include "Unit.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <time.h>
+#include <stdlib.h>
 
 //@CHANGED
 Master::Master()
@@ -13,7 +15,7 @@ Master::Master()
     monsters = new MonsterTeam;
 
 	map = new Map;
-    unitGrid = new Unit[map->getX][map->getY];
+    unitGrid = new Unit* [map->getX][map->getY];
 
  		for (unsigned int i = 0; i < *(map->getY); i++)
 			for (unsigned int j = 0; j < *(map->getX); j++)
@@ -32,7 +34,7 @@ void Master::detachUnit(Unit* inputUnit)
 
 void Master::notify(Unit* unit)
 {
-	unit.notify();
+	unit->update(); //@CHANGED
 }
 
 //@CHANGED
@@ -88,8 +90,8 @@ void Master::addToMap(Unit* unit)
 	//Put player in a random position
 	srand(time(0));
 	do {
-		x = (rand() % map->getY) + 1;
-		y = (rand() % map->getX) + 1;
+		x = (rand() % (map->getY())) + 1; //@changed
+		y = (rand() % (map->getX())) + 1; //@changed
 	} while (!map->availableSpace(x, y));
 
 	cout << "Adding player to position [" << x << ',' << y << ']' << endl;
@@ -108,8 +110,8 @@ void Master::addToMap(Team* team)
 Point Master::locateUnit(Unit* unit)
 {
     Point location;
-    for (int i = 0; i < map->getY; i++)
-        for (int j = 0; j < map->getX; j++)
+    for (int i = 0; i < map->getY(); i++)
+        for (int j = 0; j < map->getX(); j++)
             if(unitGrid[i][j] == unit)
             {
 				location.y = i;
@@ -123,9 +125,9 @@ void Master::removeDestroyedUnits()
 
 }
 
-void Master::notify(Unit*)
-{
-}
+//void Master::notify(Unit*)
+//{
+//} @changed 
 
 //@NOTE This is new
 void Master::addMonsterTeam(Unit* monster)

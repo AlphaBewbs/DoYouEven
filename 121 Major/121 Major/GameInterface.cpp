@@ -46,7 +46,7 @@ void GameInterface::chooseHero()
 	}
 	cout << endl << "Excellent! Lets build your team!" << endl << endl;
 
-	for (size_t i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
 		cout << "Choose your hero number " << i << "!" << endl;
 			cout << "\t1) Mage" << endl;
@@ -76,7 +76,7 @@ void GameInterface::chooseHero()
 
 		cout << "...ONWARD THEN!" << endl;
 
-		Unit* hero;
+		Unit* hero = NULL; //@changed to null
 
 		switch (choice)
 		{
@@ -196,11 +196,11 @@ void GameInterface::createMonsters()
 		for(int count = 0; count < monsterNum; count++)
 		{
 			srand (time(NULL));
-			int monsterType = rand() % 3 + 1;
+			size_t monsterType = rand() % 3 + 1;
 
 			if(monsterType == 1 )
 			{
-					monsters[count];
+					
 					monsters[count] = elemental->clone(); //prototype
 					master.addMonsterTeam(monsters[count]);
 					cout << "Creating a Monster: ";
@@ -209,7 +209,7 @@ void GameInterface::createMonsters()
 			}
 			else if (monsterType == 2 )
 			{
-					monsters[count];
+					
 					monsters[count] = ogre->clone(); //prototype
 					master.addMonsterTeam(monsters[count]);
 					cout << "Creating a Monster: ";
@@ -218,7 +218,7 @@ void GameInterface::createMonsters()
 			}
 			else if (monsterType == 3 )
 			{
-					monsters[count];
+					
 					monsters[count] = goblin->clone(); //prototype
 					master.addMonsterTeam(monsters[count]);
 					cout << "Creating a Monster: ";
