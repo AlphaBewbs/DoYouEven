@@ -84,6 +84,12 @@ class GameInterface
 		void chooseHero();
 
 		/**
+		*		This function allows the user to choose the amount of monsters that
+		* 	they want.
+		*/
+		void createMonsters();
+
+		/**
 		*		This function allows the user to choose the type of units they want
 		*		their companions to be.
 		*/
