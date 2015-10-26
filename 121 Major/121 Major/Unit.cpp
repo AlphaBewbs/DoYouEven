@@ -11,7 +11,6 @@ Student Number: 15075754
 
 ********************************************/
 #include "Unit.h"
-#include "GameMaster.h"
 #include <sstream>
 
 Unit::Unit(int _health, int _damage)
@@ -19,7 +18,7 @@ Unit::Unit(int _health, int _damage)
 	health = _health;
 	damage = _damage;
 
-	gameMaster = NULL;
+	master = NULL;
 }
 
 string Unit::getDescription() const
@@ -54,11 +53,11 @@ int Unit::takeDamage(int _damage)
 //Observer-Mediator
 Unit::~Unit()
 {
-	if(gameMaster != NULL)
-		gameMaster->detach(this);
+	if(master != NULL)
+		master->detach(this);
 }
 
-void Unit::registerGameMaster(GameMaster * _gameMaster)
+void Unit::registerMaster(Master * _master)
 {
-	gameMaster = _gameMaster;
+	master = _master;
 }

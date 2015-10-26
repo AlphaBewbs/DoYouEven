@@ -29,6 +29,7 @@ Student Number: 15075754
 
 #include "UnitFactory.h"
 #include "Master.h"
+#include "Unit.h"
 
 class GameInterface
 {

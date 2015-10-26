@@ -14,8 +14,7 @@ Student Number: 15075754
 #ifndef GAMEMASTER_H
 #define GAMEMASTER_H
 
-#include "Unit.h"
-
+class unit;
 class Team;
 
 using namespace std;
@@ -34,7 +33,7 @@ class GameMaster
 	protected:
 		int turn;
 		Team* heros;
-		Team* momsters;
+		Team* monsters;
 
 	public:
 		GameMaster();

@@ -45,6 +45,7 @@ void Map::setMap()
     }
     myReadFile.close();
 }
+
 void Map::printMap()
 {
     for(int i = 0; i < mapSizeX;i++)
@@ -55,28 +56,29 @@ void Map::printMap()
 
 bool Map::Move(int x, int y, int prevX, int prevY)
 {
-  if(y > mapSizeY)
-    return false;
-  else(x > mapSizeX)
-    return false;
+	if(y > mapSizeY)
+		return false;
+	else if(x > mapSizeX)
+		return false;
 
-  if(x != prevX + 1 || x != prevX - 1)
-    return false;
 
-  if(y != prevY + 1 || y != prevY - 1)
-    return false;
+	if(x != prevX + 1 || x != prevX - 1)
+		return false;
 
-  if(MapContents[x][y] == ' ')
-    return true;
-  else
-    return false;
+	if(y != prevY + 1 || y != prevY - 1)
+		return false;
+
+	if(MapContents[x][y] == ' ')
+		return true;
+	else
+		return false;
 }
 
 bool Map::availableSpace(int x, int y)
 {
 	if(y > mapSizeY)
 	  return false;
-	else(x > mapSizeX)
+	else if (x > mapSizeX)
 	  return false;
 
 	if(MapContents[x][y] == ' ')

@@ -13,7 +13,7 @@ Student Number: 15075754
 #include "Team.h"
 
 
-Team(GameMaster*_gameMaster)
+Team::Team(GameMaster*_gameMaster)
 {
 	gameMaster = _gameMaster;
 }
@@ -21,19 +21,21 @@ Team(GameMaster*_gameMaster)
 void Team::addUnit(Unit *unit)
 {
 	units.push_back(unit);
-	unit->registerGameMaster(this);
+	unit->registerMaster(this);
 }
 
-void attack()
+//@NOTE we this might be useless 
+void Team::attack()
 {
-	for(int j = 0; j <= units.size(); j++)
-		units[j].
+	//for(int j = 0; j <= units.size(); j++)
+		//units[j]->attack
 }
 
 void Team::takeDamage(Unit* unitAttacker)
 {
 	Unit* unitDefender = 0;
 	int count = 0;
+	int dmg;
 
 	do
 	{
@@ -51,7 +53,7 @@ int Team::getSize()
 
 Unit* Team::getUnitAt(int position)
 {
-	return units.at(position)
+	return units.at(position);
 }
 
 void Team::setGameMaster(GameMaster* _gameMaster)

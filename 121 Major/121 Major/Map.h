@@ -18,8 +18,8 @@ public:
     void setMap();
 
     //@CHANGED
-    int getY() {return mapSizeY};
-    int getX() {return mapSizeX};
+	int getY() { return mapSizeY; };
+	int getX() { return mapSizeX; };
 
 
 };

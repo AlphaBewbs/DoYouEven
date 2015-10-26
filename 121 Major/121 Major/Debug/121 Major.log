@@ -1,72 +1,489 @@
-﻿Build started 2015/10/23 6:43:58 PM.
+﻿Build started 2015/10/26 9:37:50 AM.
      1>Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bludgeoning.cpp GameInterface.cpp GameMaster.cpp Magic.cpp Main.cpp Overlord.cpp Piercing.cpp Unit.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bludgeoning.cpp GameInterface.cpp GameMaster.cpp HeroTeam.cpp Magic.cpp Main.cpp Map.cpp Master.cpp MonsterTeam.cpp Piercing.cpp Team.cpp Unit.cpp
          Unit.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(22): error C2065: 'gameMaster': undeclared identifier
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(46): error C2600: 'Unit::~Unit': cannot define a compiler-generated special member function (must be declared in the class first)
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(47): error C2065: 'gameMaster': undeclared identifier
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(47): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): error C2065: 'gameMaster': undeclared identifier
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): error C2227: left of '->detach' must point to class/struct/union/generic type
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): note: type is 'unknown-type'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(48): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(55): error C2600: 'Unit::~Unit': cannot define a compiler-generated special member function (must be declared in the class first)
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(57): error C2039: 'detach': is not a member of 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(57): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(56): warning C4390: ';': empty controlled statement found; is this the intent?
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.cpp(56): note: This diagnostic occurred in the compiler generated function 'Unit::~Unit(void)'
+         Team.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2059: syntax error: '>'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2976: 'std::vector': too few template arguments
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(678): note: see declaration of 'std::vector'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(36): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(37): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2433: 'Team::Unit': 'virtual' not permitted on data declarations
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(17): error C2512: 'std::vector': no appropriate default constructor available
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(678): note: see declaration of 'std::vector'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(21): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(21): error C2275: 'unit': illegal use of this type as an expression
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(17): note: see declaration of 'unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(21): error C2761: 'void Team::addUnit(void)': member function redeclaration not allowed
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(22): error C2448: 'Team::addUnit': function-style initializer appears to be a function definition
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(34): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(34): error C2065: 'unitAttacker': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(34): error C2761: 'void Team::takeDamage(void)': member function redeclaration not allowed
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(35): error C2448: 'Team::takeDamage': function-style initializer appears to be a function definition
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(51): error C2662: '_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::size_type std::vector<_Ty,_Alloc>::size(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(51): note: Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(51): note: Conversion requires a second user-defined-conversion operator or constructor
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(54): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(54): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(54): error C2039: 'getUnitAt': is not a member of 'Team'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(22): note: see declaration of 'Team'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(55): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(55): error C2059: syntax error: '{'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(55): error C2143: syntax error: missing ';' before '{'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.cpp(55): error C2447: '{': missing function header (old-style formal list?)
          Piercing.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(58): error C2065: 'subject': undeclared identifier
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(58): error C2227: left of '->state' must point to class/struct/union/generic type
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(58): note: type is 'unknown-type'
-         Overlord.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(16): error C2628: 'Overlord' followed by 'void' is illegal (did you forget a ';'?)
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): error C2259: 'Overlord': cannot instantiate abstract class
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): note: due to following members:
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): note: 'void GameMaster::attack(void)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(38): note: see declaration of 'GameMaster::attack'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): note: 'void GameMaster::update(void)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(39): note: see declaration of 'GameMaster::update'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(17): error C2556: 'Overlord Overlord::notify(Unit *)': overloaded function differs only by return type from 'void Overlord::notify(Unit *)'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.h(22): note: see declaration of 'Overlord::notify'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(28): error C2228: left of '.getSubClass' must have class/struct/union
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(28): note: type is 'Unit *'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\overlord.cpp(28): note: did you intend to use '->' instead?
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(59): error C2065: 'subject': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(59): error C2227: left of '->state' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\piercing.cpp(59): note: type is 'unknown-type'
+         MonsterTeam.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2059: syntax error: '>'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2976: 'std::vector': too few template arguments
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(678): note: see declaration of 'std::vector'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(36): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(37): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2433: 'Team::Unit': 'virtual' not permitted on data declarations
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\monsterteam.cpp(26): error C2660: 'Team::addUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\monsterteam.cpp(28): error C2660: 'Team::addUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\monsterteam.cpp(30): error C2660: 'Team::addUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\monsterteam.cpp(38): error C2039: 'update': is not a member of 'MonsterTeam'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\monsterteam.h(21): note: see declaration of 'MonsterTeam'
+         Master.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2059: syntax error: '>'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2976: 'std::vector': too few template arguments
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(678): note: see declaration of 'std::vector'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(36): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(37): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2433: 'Team::Unit': 'virtual' not permitted on data declarations
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(9): error C2600: 'Master::Master': cannot define a compiler-generated special member function (must be declared in the class first)
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(11): error C2512: 'HeroTeam': no appropriate default constructor available
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(11): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(12): error C2065: 'momsters': undeclared identifier
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(12): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(12): error C2512: 'MonsterTeam': no appropriate default constructor available
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(12): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(14): error C2512: 'Map': no appropriate default constructor available
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(14): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): error C2065: 'unitGrid': undeclared identifier
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): error C2440: 'initializing': cannot convert from 'int (__thiscall Map::* )(void)' to 'unsigned int'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): note: There is no context in which this conversion is possible
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): error C2512: 'unit': no appropriate default constructor available
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(15): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): error C3867: 'Map::getY': non-standard syntax; use '&' to create a pointer to member
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): error C2446: '<': no conversion from 'int (__thiscall Map::* )(void)' to 'size_t'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): note: There is no context in which this conversion is possible
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): error C2297: '<': illegal, right operand has type 'int (__thiscall Map::* )(void)'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(17): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): error C3867: 'Map::getX': non-standard syntax; use '&' to create a pointer to member
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): error C2446: '<': no conversion from 'int (__thiscall Map::* )(void)' to 'size_t'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): note: There is no context in which this conversion is possible
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): error C2297: '<': illegal, right operand has type 'int (__thiscall Map::* )(void)'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(19): error C2065: 'unitGrid': undeclared identifier
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(19): note: This diagnostic occurred in the compiler generated function 'Master::Master(void)'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(23): error C2511: 'void Master::attachUnit(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(28): error C2511: 'void Master::detachUnit(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(33): error C2511: 'void Master::notify(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(34): error C2228: left of '.notify' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(34): note: type is 'Unit *'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(34): note: did you intend to use '->' instead?
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(39): error C2511: 'bool Master::moveUnit(Unit *,char)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(40): error C2660: 'Master::locateUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(41): error C2065: 'location': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(41): error C2228: left of '.y' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(41): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(42): error C2065: 'location': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(42): error C2228: left of '.x' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(42): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(52): error C2227: left of '->Move' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(52): error C2065: 'location': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(52): error C2228: left of '.x' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(52): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(52): error C2228: left of '.y' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(52): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(54): error C2065: 'unitGrid': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(54): error C2065: 'location': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(54): error C2228: left of '.x' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(54): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(54): error C2228: left of '.y' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(54): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(55): error C2065: 'unitGrid': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(55): error C2065: 'location': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(55): error C2228: left of '.x' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(55): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(55): error C2228: left of '.y' must have class/struct/union
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(55): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(66): error C2511: 'void Master::attack(Unit *,Team *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(68): error C2660: 'Team::takeDamage': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(78): error C2511: 'void Master::addToMap(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(83): error C2227: left of '->addUnit' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(85): error C3861: 'addUnit': identifier not found
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(85): error C2597: illegal reference to non-static member 'GameMaster::monsters'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(85): error C3867: 'GameMaster::monsters': non-standard syntax; use '&' to create a pointer to member
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(88): error C3861: 'time': identifier not found
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(90): error C2227: left of '->rows' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(91): error C2227: left of '->columns' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(92): error C2227: left of '->availableSpace' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(95): error C2065: 'unitGrid': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(108): error C2511: 'Point Master::locateUnit(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(110): error C2227: left of '->getY' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(111): error C2227: left of '->getX' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(112): error C2065: 'unitGrid': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(126): error C2511: 'void Master::notify(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(131): error C2511: 'void Master::addMonsterTeam(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(132): error C2227: left of '->addUnit' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(135): error C2511: 'void Master::addPlayerTeam(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(136): error C2227: left of '->addUnit' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(142): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(144): error C2039: 'getUnitAt': is not a member of 'Team'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(22): note: see declaration of 'Team'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(145): error C2660: 'Master::locateUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(149): error C3861: 'time': identifier not found
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(157): error C2065: 'chance': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(159): error C2065: 'chance': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(161): error C2065: 'chance': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(167): error C2065: 'unitGrid': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(172): error C2511: 'bool Master::canUnitAttack(Unit *)': overloaded member function not found in 'Master'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(22): note: see declaration of 'Master'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(173): error C2671: 'Master::canUnitAttack': static member functions do not have 'this' pointers
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(173): error C2227: left of '->locateUnit' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(176): error C2227: left of '->availableSpace' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(176): error C2065: 'y': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(177): error C2227: left of '->availableSpace' must point to class/struct/union/generic type
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(177): error C2065: 'y': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(177): fatal error C1003: error count exceeds 100; stopping compilation
+         Map.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\map.cpp(20): error C2563: mismatch in formal parameter list
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\map.cpp(20): error C2568: '<': unable to resolve function overload
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\map.cpp(20): note: could be 'size_t std::size(const _Ty (&)[_Size]) noexcept'
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\map.cpp(20): note: or       'unknown-type std::size(const _Container &)'
          Main.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
          Magic.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
      1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\magic.cpp(58): error C2065: 'subject': undeclared identifier
      1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\magic.cpp(58): error C2227: left of '->state' must point to class/struct/union/generic type
          c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\magic.cpp(58): note: type is 'unknown-type'
+         HeroTeam.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2059: syntax error: '>'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2976: 'std::vector': too few template arguments
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(678): note: see declaration of 'std::vector'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(36): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(37): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2433: 'Team::Unit': 'virtual' not permitted on data declarations
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\heroteam.cpp(26): error C2660: 'Team::addUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\heroteam.cpp(28): error C2660: 'Team::addUnit': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\heroteam.cpp(30): error C2660: 'Team::addUnit': function does not take 1 arguments
          GameMaster.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.cpp(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2065: 'Unit': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2059: syntax error: '>'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(25): error C2976: 'std::vector': too few template arguments
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(678): note: see declaration of 'std::vector'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(36): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(37): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2433: 'Team::Unit': 'virtual' not permitted on data declarations
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\team.h(39): error C2238: unexpected token(s) preceding ';'
          GameInterface.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(14): error C2065: 'units': undeclared identifier
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(50): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(95): error C2660: 'Master::addPlayerTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(96): error C2660: 'Master::addToMap': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(172): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(173): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(174): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(182): error C2275: 'MonsterFactory': illegal use of this type as an expression
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unitfactory.h(48): note: see declaration of 'MonsterFactory'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(182): error C2228: left of '.produceMagic' must have class/struct/union
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(183): error C2275: 'MonsterFactory': illegal use of this type as an expression
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unitfactory.h(48): note: see declaration of 'MonsterFactory'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(183): error C2228: left of '.produceBludgeoning' must have class/struct/union
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(184): error C2146: syntax error: missing ';' before identifier 'goblin'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(184): error C2275: 'MonsterFactory': illegal use of this type as an expression
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unitfactory.h(48): note: see declaration of 'MonsterFactory'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(184): error C2228: left of '.producePiercing' must have class/struct/union
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(186): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(187): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(188): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(191): error C2131: expression did not evaluate to a constant
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(191): note: failure was caused by non-constant arguments or reference to a non-constant symbol
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(191): note: see usage of 'extraMonsters'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(195): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(201): error C3863: array type 'Unit **[extraMonsters]' is not assignable
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(202): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(204): error C2227: left of '->getDescription' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(204): note: type is 'Unit **[extraMonsters]'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(210): error C3863: array type 'Unit **[extraMonsters]' is not assignable
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(211): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(213): error C2227: left of '->getDescription' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(213): note: type is 'Unit **[extraMonsters]'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(219): error C3863: array type 'Unit **[extraMonsters]' is not assignable
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(220): error C2660: 'Master::addMonsterTeam': function does not take 1 arguments
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(222): error C2227: left of '->getDescription' must point to class/struct/union/generic type
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(222): note: type is 'Unit **[extraMonsters]'
          Bludgeoning.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2143: syntax error: missing ';' before '*'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(32): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\bludgeoning.cpp(58): error C2065: 'subject': undeclared identifier
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\bludgeoning.cpp(58): error C2227: left of '->state' must point to class/struct/union/generic type
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\bludgeoning.cpp(58): note: type is 'unknown-type'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(44): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(45): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(52): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(54): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gamemaster.h(55): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(26): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(29): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(30): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(31): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(32): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(35): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(38): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(39): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(43): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2061: syntax error: identifier 'Unit'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(46): error C2535: 'void Master::notify(void)': member function already defined or declared
+         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(42): note: see declaration of 'Master::notify'
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.h(49): error C2061: syntax error: identifier 'Unit'
          Generating Code...
      1>Done Building Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:05.06
+Time Elapsed 00:00:09.12
