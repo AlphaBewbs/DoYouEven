@@ -20,11 +20,13 @@ Student Number: 15075754
 
 class MonsterTeam : public Team
 {
-    MonsterTeam(GameMaster *);
-    void initUnits();
-    void turn();
-    void notify();
-    void attack();
+	public:
+		MonsterTeam() {};
+		MonsterTeam(Master *);
+		void initUnits();
+		void turn();
+		void notify();
+		void attack();
 };
 
 #endif

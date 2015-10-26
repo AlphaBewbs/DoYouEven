@@ -29,6 +29,7 @@ Student Number: 15075754
 
 #include <string>
 #include <iostream>
+#include "Master.h"
 
 using namespace std;
 
@@ -67,9 +68,10 @@ class Unit
 		string unit;	//Either a player/hero or monster/mob
 
 		//Observer-Mediator
-		GameMaster* gameMaster;
+		Master* master;
 
 	public:
+		Unit() {};
 		/**
 		*		The Constructor for the Unit object.
 		*		@param _health the value that the health of the unit should be initialised to.
@@ -79,11 +81,12 @@ class Unit
 		/**
 		*		This function prints a description of the unit. i.e health, damage, type, subclass.
 		*/
+		~Unit();
 		virtual string getDescription() const;
 		/**
 		*		This function returns the type of unit.
 		*/
-		virtual string getUnit() = 0;	
+		virtual string getUnit() = 0;
 
 		/**
 		*		This function returns the subclass of the unit.
@@ -96,14 +99,14 @@ class Unit
 		virtual string getSkill() = 0;
 
 
-		
+
 		/**
 		*		This function is used when one unit attacks another unit.
 		*		@param other is the unit that is being attacked.
 		*		An int is returned from the unit that was attacked.
 		*/
 		virtual int attack(Unit*) = 0;
-		
+
 		/**
 		*		This function causes a unit ot  take damage and in turn its health
 		*		will decrease.
@@ -123,9 +126,9 @@ class Unit
 
 		/**
 		*		This function forms part of the observer and mediator design patterns.
-		*		@param game is a GameMaster object passed to it.
+		*		@param game is a Master object passed to it.
 		*/
-		virtual void registerGameMaster(GameMaster* game);
+		virtual void registerMaster(Master* game);
 };
 //static int count = 0;
 

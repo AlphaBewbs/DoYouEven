@@ -16,38 +16,38 @@ Student Number: 15075754
 
 #include "GameMaster.h"
 #include "Map.h"
+
+
 using namespace std;
 
 class Master : public GameMaster
 {
 	private:
 		Map* map;
-    	Unit*** teamGrid;
+    	Unit*** unitGrid;
 
 	public:
+		Master();
     	virtual	void attachUnit(Unit*);
 		virtual void detachUnit(Unit*);
 		virtual bool moveUnit(Unit*, char);
 		void attack(Unit*, Team*);
 
-		//@CHANGED This getUnitAt function is removed
-		//Unit* getUnitAt(int index);
-
 		virtual void printMap();
 		virtual void addToMap(Unit*);
 
-		//@CHANGED We don't need this
-		//virtual void addToMap(Team*);
 
 		void addMonsterTeam(Unit*);
 		void addPlayerTeam(Unit*);
-		void moveMonsters()
+		void moveMonsters();
 
 		virtual void notify(Unit*);
 		virtual Point locateUnit(Unit*);
 
 		virtual void removeDestroyedUnits();
-    	virtual void notify(Unit*);
+
+
+		bool canUnitAttack(Unit*);
 
 };
 

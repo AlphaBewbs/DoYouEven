@@ -26,10 +26,8 @@ Student Number: 15075754
 #ifndef ADAPTER_H
 #define ADAPTER_H
 
-#include "Party.h"
-#include "Overlord.h"
 
-class Adapter : public Overlord
+class Adapter
 {
   public:
 
@@ -38,13 +36,11 @@ class Adapter : public Overlord
     *   @param vector<Unit*> passes the units to be addded to the party.
     *   @param dmg passes the damage that needs to be dealt to the party array.
     */
-    void attack(vector<Unit*>, dmg);
 
   private:
     /**
     * A private variable party which the units are added to that take the damage.
     */
-    Party party;
 };
 
 #endif

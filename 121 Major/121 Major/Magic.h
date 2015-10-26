@@ -29,7 +29,6 @@ Student Number: 15075754
 #define MAGIC_H
 
 #include "Unit.h"
-#include "Environment.h"
 
 using namespace std;
 

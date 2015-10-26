@@ -1,6 +1,7 @@
 #include "Master.h"
 #include "HeroTeam.h"
 #include "MonsterTeam.h"
+#include "Unit.h"
 #include <stdio.h>
 #include <ctype.h>
 
@@ -9,14 +10,14 @@ Master::Master()
 {
     turn = 0;
     heros = new HeroTeam;
-    momsters = new MonsterTeam;
+    monsters = new MonsterTeam;
 
 	map = new Map;
-    unitGrid = new unit[map->getX][map->getY];
+    unitGrid = new Unit[map->getX][map->getY];
 
-		for (size_t i = 0; i < map->getY; i++)
-        for (size_t j = 0; j < map->getX; j++)
-						unitGrid [j][i] = 0;
+ 		for (unsigned int i = 0; i < *(map->getY); i++)
+			for (unsigned int j = 0; j < *(map->getX); j++)
+					unitGrid [j][i] = 0;
 }
 
 void Master::attachUnit(Unit* unit)
@@ -31,13 +32,13 @@ void Master::detachUnit(Unit* inputUnit)
 
 void Master::notify(Unit* unit)
 {
-  unit.notify();
+	unit.notify();
 }
 
 //@CHANGED
 bool Master::moveUnit(Unit* unit, char direction)
 {
-		Point p = locateUnit(unit);
+		Point location = locateUnit(unit);
 		int y = location.y;
 		int x = location.x;
 
@@ -82,17 +83,17 @@ void Master::addToMap(Unit* unit)
 	if(type == "Mage" || type == "Soldier" || type == "Thief")
 		heros->addUnit(unit);
 	else
-		monsters-addUnit(unit);
+		monsters->addUnit(unit);
 
 	//Put player in a random position
 	srand(time(0));
 	do {
-		x = (rand() % map->rows) + 1;
-		y = (rand() % map->columns) + 1;
+		x = (rand() % map->getY) + 1;
+		y = (rand() % map->getX) + 1;
 	} while (!map->availableSpace(x, y));
 
 	cout << "Adding player to position [" << x << ',' << y << ']' << endl;
-	unitGrid[x][y] = Unit;
+	unitGrid[x][y] = unit;
 }
 
 //@NOTE we dont need this
@@ -107,9 +108,9 @@ void Master::addToMap(Team* team)
 Point Master::locateUnit(Unit* unit)
 {
     Point location;
-    for (size_t i = 0; i < map->getY; i++)
-        for (size_t j = 0; j < map->getX; j++)
-            if(unitGrid[x][y] == unit)
+    for (int i = 0; i < map->getY; i++)
+        for (int j = 0; j < map->getX; j++)
+            if(unitGrid[i][j] == unit)
             {
 				location.y = i;
                 location.x = j;
@@ -127,21 +128,21 @@ void Master::notify(Unit*)
 }
 
 //@NOTE This is new
-void Master::buildMonsterTeam(Unit* monster)
+void Master::addMonsterTeam(Unit* monster)
 {
-	MonsterTeam->addUnit(player);
+	monsters->addUnit(monster);
 }
-void Master::buildPlayerTeam(Unit* player)
+void Master::addPlayerTeam(Unit* player)
 {
-	HeroTeam->addUnit(player);
+	heros->addUnit(player);
 }
 
 //@NOTE this function will move the enemies
 void Master::moveMonsters()
 {
-	for (size_t i = 0; i < MonsterTeam->getSize(); i++)
+	for (size_t i = 0; i < monsters->getSize(); i++)
 	{
-		Unit enemy = MonsterTeam->getUnitAt(i);
+		Unit* enemy = monsters->getUnitAt(i);
 		Point location = locateUnit(enemy);
 
 		int x = location.x;
@@ -153,7 +154,7 @@ void Master::moveMonsters()
 
 			// (rand() % map->rows) + 1
 			//do a random variable from 1-100;
-
+			int chance;
 			if(chance >= 0 && chance < 25)
 				x++;
 			else if(chance >= 25 && chance < 50)
@@ -164,19 +165,19 @@ void Master::moveMonsters()
 				x--;
 
 		} while (!map->availableSpace(x, y));
-		unitGrid[x][y] = hero;
+		unitGrid[x][y] = enemy;
 	}
 }//@NOTE THIS SHOULD FUCKING WORK
 
 bool Master::canUnitAttack(Unit* unit)
 {
-	Point location = locateUnit(unit);
+	Point location = this->locateUnit(unit);
 
 	bool wsda[4];
-	wsda[0] = availableSpace(location.x, y + 1);
-	wsda[1] = availableSpace(location.x, y - 1);
-	wsda[2] = availableSpace(location.x + 1, y);
-	wsda[3] = availableSpace(location.x - 1, y);
+	wsda[0] = map->availableSpace(location.x, location.y + 1);
+	wsda[1] = map->availableSpace(location.x, location.y - 1);
+	wsda[2] = map->availableSpace(location.x + 1, location.y);
+	wsda[3] = map->availableSpace(location.x - 1, location.y);
 
 	int rand;
 	do

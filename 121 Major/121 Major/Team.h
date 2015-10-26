@@ -13,7 +13,7 @@ Student Number: 15075754
 #ifndef TEAM_H
 #define TEAM_H
 
-#include "GameMaster.h"
+#include "Master.h"
 #include <vector>
 
 //OBSERVER
@@ -21,12 +21,12 @@ Student Number: 15075754
 class Team
 {
 	protected:
-		GameMaster* gameMaster;
+		Master* master;
 		vector<Unit*> units;
 
 	public:
-		Team();
-		Team(GameMaster*);
+		Team() {};
+		Team(Master*);
 
 		virtual void initUnits() = 0;
 		virtual void notify() = 0;
@@ -38,7 +38,7 @@ class Team
 
 		virtual Unit* getUnitAt(int);
 		virtual int getSize();
-		virtual void setGameMaster(GameMaster*);
+		virtual void setMaster(Master*);
 
 };
 
