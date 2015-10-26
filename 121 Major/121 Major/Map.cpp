@@ -1,4 +1,5 @@
 #include "Map.h"
+#include "Unit.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -85,4 +86,9 @@ bool Map::availableSpace(int x, int y)
 	  return true;
 	else
 	  return false;
+}
+
+void Map::addUnit(char unit, int x, int y)
+{
+	MapContents[x][y] = unit;
 }

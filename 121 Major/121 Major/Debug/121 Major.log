@@ -1,8 +1,18 @@
-﻿Build started 2015/10/26 3:11:28 PM.
+﻿Build started 2015/10/26 9:34:20 PM.
      1>Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
-         Main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Master.cpp
+         Master.cpp
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(20): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(23): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(24): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(90): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(114): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(115): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(148): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(157): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(162): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(122): warning C4715: 'Master::locateUnit': not all control paths return a value
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.lib" /MACHINE:X86 Debug\Adapter.obj
          Debug\Bludgeoning.obj
@@ -17,10 +27,9 @@
          Debug\Team.obj
          Debug\Piercing.obj
          Debug\Unit.obj
-     1>Master.obj : error LNK2019: unresolved external symbol "public: __thiscall GameMaster::GameMaster(void)" (??0GameMaster@@QAE@XZ) referenced in function "public: __thiscall Master::Master(void)" (??0Master@@QAE@XZ)
-     1>C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.exe : fatal error LNK1120: 1 unresolved externals
-     1>Done Building Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" (Build target(s)) -- FAILED.
+         121 Major.vcxproj -> C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.exe
+     1>Done Building Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:02.93
+Time Elapsed 00:00:01.23

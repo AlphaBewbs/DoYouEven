@@ -70,13 +70,8 @@ class GameInterface
 		/**
 		*		@TODO implememnt the move funtion
 		*/
-		void move();
+		void moveMonsters();
 
-		/**
-		*		This funtion uses the abstract factory design pattern to create units
-		*		of the desired type.
-		*/
-		void createUnits();
 
 		/**
 		*		This function allows the user to choose the kind of unit they want
@@ -90,11 +85,9 @@ class GameInterface
 		*/
 		void createMonsters();
 
-		/**
-		*		This function allows the user to choose the type of units they want
-		*		their companions to be.
-		*/
-		void chooseCompanion();
+		void print();
+
+
 };
 
 #endif

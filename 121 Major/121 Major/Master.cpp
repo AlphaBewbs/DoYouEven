@@ -14,7 +14,7 @@ Master::Master()
     heros = new HeroTeam;
     monsters = new MonsterTeam;
 
-	map = new Map;
+	map = new Map("Map.txt");
 	unitGrid = new Unit **[map->getX()];
 
 	for (int j = 0; j < map->getX(); j++)
@@ -43,9 +43,9 @@ void Master::notify(Unit* unit)
 //@CHANGED
 bool Master::moveUnit(Unit* unit, char direction)
 {
-		Point location = locateUnit(unit);
-		int y = location.y;
-		int x = location.x;
+	Point location = locateUnit(unit);
+	int y = location.y;
+	int x = location.x;
 
     direction = toupper(direction);
     switch(direction)
@@ -55,16 +55,17 @@ bool Master::moveUnit(Unit* unit, char direction)
         case 'D': x++; break;
         case 'A': x--; break;
     }
-		if(map->Move(x, y, location.x, location.y))
-		{
-			unitGrid[x][y] = unitGrid[location.x][location.y];
-			unitGrid[location.x][location.y] = 0;
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+	
+	if(map->Move(x, y, location.x, location.y))
+	{
+		unitGrid[x][y] = unitGrid[location.x][location.y];
+		unitGrid[location.x][location.y] = 0;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 
 }
 
@@ -85,20 +86,17 @@ void Master::addToMap(Unit* unit)
 	int x, y;
 	string type = unit->getSubClass();
 
-	if(type == "Mage" || type == "Soldier" || type == "Thief")
-		heros->addUnit(unit);
-	else
-		monsters->addUnit(unit);
-
 	//Put player in a random position
 	srand(time(0));
 	do {
-		x = (rand() % (map->getY())) + 1; //@changed
-		y = (rand() % (map->getX())) + 1; //@changed
+ 		x = (rand() % (map->getY())) + 1; 
+		y = (rand() % (map->getX())) + 1;
 	} while (!map->availableSpace(x, y));
 
 	cout << "Adding player to position [" << x << ',' << y << ']' << endl;
 	unitGrid[x][y] = unit;
+
+	map->addUnit('M', x, y);
 }
 
 //@NOTE we dont need this
@@ -130,16 +128,18 @@ void Master::removeDestroyedUnits()
 
 //void Master::notify(Unit*)
 //{
-//} @changed 
+//} @changed
 
 //@NOTE This is new
 void Master::addMonsterTeam(Unit* monster)
 {
 	monsters->addUnit(monster);
+	addToMap(monster);
 }
 void Master::addPlayerTeam(Unit* player)
 {
 	heros->addUnit(player);
+	addToMap(player);
 }
 
 //@NOTE this function will move the enemies
@@ -152,6 +152,8 @@ void Master::moveMonsters()
 
 		int x = location.x;
 		int y = location.y;
+
+		map->addUnit('K', x, y);
 		srand(time(0));
 		do {
 			x = location.x;
@@ -169,8 +171,17 @@ void Master::moveMonsters()
 			else
 				x--;
 
-		} while (!map->availableSpace(x, y));
-		unitGrid[x][y] = enemy;
+		} while (map->Move(x, y, location.x, location.y));
+
+		unitGrid[x][y] = unitGrid[location.x][location.y];
+
+		unitGrid[location.x][location.y] = NULL;
+
+		cout << "unit" << endl;
+		cout << location.x << '\t' << location.y << endl;
+		cout << x << '\t' << y << endl;
+		map->addUnit('M', x, y);
+		cout << endl;
 	}
 }//@NOTE THIS SHOULD FUCKING WORK
 
@@ -191,4 +202,9 @@ bool Master::canUnitAttack(Unit* unit)
 	}while(wsda[chance] == false);
 
 	return wsda[chance];
+}
+
+void Master::print()
+{
+	map->printMap();
 }

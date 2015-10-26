@@ -36,9 +36,8 @@ class GameMaster
 		Team* monsters;
 
 	public:
-		GameMaster();
+		GameMaster() {};
 
-		void playGame();
 
 		virtual	void attachUnit(Unit*) = 0;
 		virtual void detachUnit(Unit*)  = 0;

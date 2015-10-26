@@ -13,13 +13,6 @@ GameInterface::GameInterface()
 {
 	cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
 
-	cout << "	°*”˜˜”*°•.¸★★¸.•°*”˜˜”*°" << endl;
-	cout << "(¸.•´ (¸.•´ .•´ ¸¸.•¨¯`•" << endl;
-	cout << "∩ │◥███◣ ╱◥███◣" << endl;
-	cout << "╱◥◣ ◥████◣▓∩▓│∩ ║" << endl;
-	cout << "│╱◥█◣║∩∩∩ ║◥█▓ ▓█◣" << endl;
-	cout << "││∩│ ▓ ║∩田│║▓ ▓ ▓∩ ║" << endl;
-
 //Read more: http://loveusms.in/smslist/lang/A/cid/10/page/14#ixzz3pd9QLUOE
 
 }
@@ -76,8 +69,7 @@ void GameInterface::chooseHero()
 
 		cout << "...ONWARD THEN!" << endl;
 
-		Unit* hero = NULL; //@changed to null
-
+		Unit* hero = NULL;
 		switch (choice)
 		{
 			case 1:
@@ -90,64 +82,18 @@ void GameInterface::chooseHero()
 				hero = playerFactory.produceBludgeoning();
 				break;
 		}
+
 		//Tells the master to aadd a unit to the player team
 		master.addPlayerTeam(hero);
-		master.addToMap(hero);
 	}
 }
 
-//needs work
-void GameInterface::chooseCompanion()
-{
-	int choice;
-	Unit * tempUnit;
-
-	cout << "Choose your hero!" << endl;
-	cout << "\t1) Mage" << endl;
-	cout << "\t2) Thief" << endl;
-	cout << "\t3) Soldier" << endl;
-
-	cin >> choice;
-
-	while (choice < 1 || choice > 3)
-	{
-		cout << "Thats not a hero..." << endl;
-		cout << "Choose your hero!" << endl;
-		cout << "\t1) Mage" << endl;
-		cout << "\t2) Thief" << endl;
-		cout << "\t3) Soldier" << endl;
-
-		cin >> choice;
-	}
-
-	cout << endl << "you chose that one... really? well okay... ONWARD THEN!" << endl;
-	switch (choice)
-	{
-	case 1:
-		tempUnit = playerFactory.produceMagic();
-		break;
-	case 2:
-		tempUnit = playerFactory.producePiercing();
-		break;
-	case 3:
-		tempUnit = playerFactory.produceBludgeoning();
-		break;
-	}
-}
 
 void GameInterface::createMonsters()
 {
 	int monsterNum;
 
 	cout << "Now lets create some monsters for you to kill!! " << endl;
-	cout << "*___ ____ _____ _____/|__" <<endl;
-	cout << "../ /////­___(___)_________ ()" <<endl;
-	cout << "./­_________________(___­_()" <<endl;
-	cout << "......)-------(_(__)­)" <<endl;
-	cout << "..//-----//" <<endl;
-	cout << ".//-----//" <<endl;
-	cout << "//___//•" <<endl;
-	cout << "»" << endl;
 
 	cout << "So how many monsters do you think you can take on...?" << endl;
 	cout << "I think you can at least handle 3 of them..." << endl;
@@ -158,23 +104,24 @@ void GameInterface::createMonsters()
 	while(monsterNum < 3 || monsterNum > 7)
 	{
 		cout << endl;
-		cout << "How about you choose a number between 3 and 7 then..." << endl;
+		cout << "How about you choose a number between 3 and 7 then...";
 		cin >> monsterNum;
 	}
 
 	if(monsterNum == 3)
 	{
-			Unit* elemental;
-			Unit* ogre;
-			Unit* goblin;
+		Unit* elemental;
+		Unit* ogre;
+		Unit* goblin;
 
-			elemental = monsterFactory.produceMagic();
-			ogre = monsterFactory.produceBludgeoning();
-			goblin = monsterFactory.producePiercing();
+		elemental = monsterFactory.produceMagic();
+		ogre = monsterFactory.produceBludgeoning();
+		goblin = monsterFactory.producePiercing();
+		cout << endl;
 
-			master.addMonsterTeam(elemental);
-			master.addMonsterTeam(ogre);
-			master.addMonsterTeam(goblin);
+		master.addMonsterTeam(elemental);
+		master.addMonsterTeam(ogre);
+		master.addMonsterTeam(goblin);
 	}
 	else
 	{
@@ -185,6 +132,7 @@ void GameInterface::createMonsters()
 		elemental = monsterFactory.produceMagic();
 		ogre = monsterFactory.produceBludgeoning();
 		goblin = monsterFactory.producePiercing();
+		cout << endl;
 
 		master.addMonsterTeam(elemental);
 		master.addMonsterTeam(ogre);
@@ -192,50 +140,40 @@ void GameInterface::createMonsters()
 
 		int extraMonsters = monsterNum - 3;
 		Unit** monsters = new Unit*[extraMonsters];
-
-		for(int count = 0; count < monsterNum; count++)
-		{
+		
+		for(int count = 0; count < extraMonsters; count++)
+		{cout << "boobs" << endl;
 			srand (time(NULL));
 			size_t monsterType = rand() % 3 + 1;
 
-			if(monsterType == 1 )
+			if (monsterType == 1)
 			{
-					
-					monsters[count] = elemental->clone(); //prototype
-					master.addMonsterTeam(monsters[count]);
-					cout << "Creating a Monster: ";
-					cout << monsters[count]->getDescription() << endl;
-
+				monsters[count] = elemental->clone(); //prototype
+				master.addMonsterTeam(monsters[count]);
 			}
-			else if (monsterType == 2 )
+			else if (monsterType == 2)
 			{
-					
-					monsters[count] = ogre->clone(); //prototype
-					master.addMonsterTeam(monsters[count]);
-					cout << "Creating a Monster: ";
-					cout << monsters[count]->getDescription() << endl;
-
+				monsters[count] = ogre->clone(); //prototype
+				master.addMonsterTeam(monsters[count]);
 			}
-			else if (monsterType == 3 )
+			else if (monsterType == 3)
 			{
-					
-					monsters[count] = goblin->clone(); //prototype
-					master.addMonsterTeam(monsters[count]);
-					cout << "Creating a Monster: ";
-					cout << monsters[count]->getDescription() << endl;
-
+				monsters[count] = goblin->clone(); //prototype
+				master.addMonsterTeam(monsters[count]);
 			}
 
 		}
-		cout << "	Well done!!" << endl;
-		cout << " Now you can start tackling those monsters.. All the best!!" << endl;
-		cout << "             __" << endl;
-		cout << "	.......... /--)" << endl;
-		cout << "	........./.../" << endl;
-		cout << "	......./....(__ ____" << endl;
-		cout << "	▓▓..........((_ i___)" << endl;
-		cout << "	▓▓..........((_ i___)" << endl;
-		cout << "	▓▓..........((_ i___)" << endl;
-		cout << "	▓▓---.___((_i__ )" << endl;
 	}
+	cout << "Well done!!" << endl;
+	cout << "Now you can start tackling those monsters.. All the best!!" << endl;
+}
+
+void GameInterface::print()
+{
+	master.print();
+}
+
+void GameInterface::moveMonsters()
+{
+	master.moveMonsters();
 }

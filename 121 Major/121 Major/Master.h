@@ -47,7 +47,7 @@ class Master : public GameMaster
 
 		virtual void removeDestroyedUnits();
 
-
+		void print();
 		bool canUnitAttack(Unit*);
 
 };

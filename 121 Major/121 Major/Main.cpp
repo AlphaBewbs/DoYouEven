@@ -12,9 +12,25 @@ Student Number: 15075754
 ********************************************/
 #include "UnitFactory.h"
 #include "Master.h"
+#include "GameInterface.h"
 
 int main()
 {
+	GameInterface gi;
+	gi.createMonsters();
+	gi.print();
+	system("pause");
+	gi.moveMonsters();
+	gi.print();
+	system("pause");
+	return 0;
+}
+
+
+
+/*int main()
+{
+	
 	Unit** units = new Unit*[100];
 	Unit* tempUnit = 0;
 
@@ -94,4 +110,4 @@ int main()
 
 	system("pause");
 	return 0;
-}
+}*/

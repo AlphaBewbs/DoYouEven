@@ -1,5 +1,6 @@
 #ifndef MAP_H
 #define MAP_H
+
 class Map
 {
 	private:
@@ -17,6 +18,8 @@ class Map
 		bool availableSpace(int, int);
 		bool Move(int, int, int, int);
 		void setMap();
+
+		void addUnit(char, int, int);
 
 		//@CHANGED
 		unsigned int getY() { return mapSizeY; };
