@@ -12,9 +12,9 @@ Student Number: 15075754
 ********************************************/
 #include "HeroTeam.h"
 
-HeroTeam::HeroTeam(GameMaster*  _gameMaster)
+HeroTeam::HeroTeam(Master*  _master)
 {
-  gameMaster = _gameMaster;
+  master = _master;
 }
 
 void HeroTeam::initUnits()

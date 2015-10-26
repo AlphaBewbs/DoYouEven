@@ -55,7 +55,6 @@ Magic* Magic::clone()
 //Observer
 void Magic::update()
 {
-	state = subject->state();
 	if(state == "")
 	{
 		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;
@@ -77,6 +76,7 @@ string Magic::event()
 	return sure;
 	EXAMPLE CODE
 	*/
+	return "whatevs";
 }
 
 void Magic::act()

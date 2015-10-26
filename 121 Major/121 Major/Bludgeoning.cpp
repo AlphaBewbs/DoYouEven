@@ -78,6 +78,7 @@ string Bludgeoning::event()
 	return sure;
 	EXAMPLE CODE
 	*/
+	return "poo";
 }
 
 void Bludgeoning::act()

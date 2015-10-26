@@ -54,7 +54,7 @@ int Unit::takeDamage(int _damage)
 Unit::~Unit()
 {
 	if(master != NULL)
-		master->detach(this);
+		master->detachUnit(this);
 }
 
 void Unit::registerMaster(Master * _master)

@@ -14,12 +14,12 @@ Student Number: 15075754
 #ifndef GAMEMASTER_H
 #define GAMEMASTER_H
 
-class unit;
+class Unit;
 class Team;
 
 using namespace std;
 
-//@NOTE added tghis fior easier functions
+//@NOTE added this fior easier functions
 struct Point
 {
 	int x;
@@ -43,13 +43,11 @@ class GameMaster
 		virtual	void attachUnit(Unit*) = 0;
 		virtual void detachUnit(Unit*)  = 0;
 		virtual bool moveUnit(Unit*, char) = 0;
-		virtual void attack(Unit*, Unit*) = 0;
 
 		//@CHANGED This getUnitAt function is removed
 		//Unit* getUnitAt(int);
 
 		virtual void printMap() = 0;
-		virtual void addToMap(Unit* , int , int) = 0;
 
 		virtual void notify(Unit*) = 0;
 		virtual Point locateUnit(Unit*) = 0;

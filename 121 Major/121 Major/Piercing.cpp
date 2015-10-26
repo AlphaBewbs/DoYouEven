@@ -56,7 +56,6 @@ Piercing* Piercing::clone()
 //Observer
 void Piercing::update()
 {
-	state = subject->state();
 	if(state == "")
 	{
 		cout << "\tThe " << subClass << " is doing doing nothing..." << endl;
@@ -78,6 +77,7 @@ string Piercing::event()
 	return sure;
 	EXAMPLE CODE
 	*/
+	return "whatevs";
 }
 
 void Piercing::act()

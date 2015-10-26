@@ -17,10 +17,10 @@ Map::Map(char* fileName)
 Map::~Map()
 {
   //@CHANGED
-  for (size_t i = 0; i < size; i++)
-    delete MapContents[i];
+	for (size_t i = 0; i < mapSizeY; i++)
+		delete MapContents[i];
 
-  delete [] MapContents;
+	delete [] MapContents;
 
 }
 

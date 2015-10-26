@@ -12,9 +12,9 @@ Student Number: 15075754
 ********************************************/
 #include "MonsterTeam.h"
 
-MonsterTeam::MonsterTeam(GameMaster* _gameMaster)
+MonsterTeam::MonsterTeam(Master* _master)
 {
-  gameMaster = _gameMaster;
+  master = _master;
 }
 
 void MonsterTeam::initUnits()
@@ -32,10 +32,10 @@ void MonsterTeam::initUnits()
 
 void MonsterTeam::turn()
 {
-  
+
 }
 
-void MonsterTeam::update()
+void MonsterTeam::notify()
 {
 
 }

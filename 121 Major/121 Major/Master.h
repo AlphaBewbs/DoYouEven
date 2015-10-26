@@ -17,6 +17,7 @@ Student Number: 15075754
 #include "GameMaster.h"
 #include "Map.h"
 
+
 using namespace std;
 
 class Master : public GameMaster
@@ -26,6 +27,7 @@ class Master : public GameMaster
     	Unit*** unitGrid;
 
 	public:
+		Master();
     	virtual	void attachUnit(Unit*);
 		virtual void detachUnit(Unit*);
 		virtual bool moveUnit(Unit*, char);
@@ -43,7 +45,6 @@ class Master : public GameMaster
 		virtual Point locateUnit(Unit*);
 
 		virtual void removeDestroyedUnits();
-    	virtual void notify(Unit*);
 
 
 		bool canUnitAttack(Unit*);

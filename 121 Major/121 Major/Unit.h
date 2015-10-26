@@ -71,6 +71,7 @@ class Unit
 		Master* master;
 
 	public:
+		Unit() {};
 		/**
 		*		The Constructor for the Unit object.
 		*		@param _health the value that the health of the unit should be initialised to.
@@ -80,6 +81,7 @@ class Unit
 		/**
 		*		This function prints a description of the unit. i.e health, damage, type, subclass.
 		*/
+		~Unit();
 		virtual string getDescription() const;
 		/**
 		*		This function returns the type of unit.

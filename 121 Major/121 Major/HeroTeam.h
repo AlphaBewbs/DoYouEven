@@ -20,11 +20,13 @@ Student Number: 15075754
 
 class HeroTeam : public Team
 {
-    HeroTeam(GameMaster *);
-    void initUnits();
-    void turn();
-    void notify();
-    void attack();
+	public:
+		HeroTeam() {};
+		HeroTeam(Master *);
+		void initUnits();
+		void turn();
+		void notify();
+		void attack();
 };
 
 #endif

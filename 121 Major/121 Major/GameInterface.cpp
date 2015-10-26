@@ -11,7 +11,6 @@ using namespace std;
 
 GameInterface::GameInterface()
 {
-	units = new Unit*[100];
 	cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
 
 	cout << "	°*”˜˜”*°•.¸★★¸.•°*”˜˜”*°" << endl;
@@ -169,6 +168,10 @@ void GameInterface::createMonsters()
 			Unit* ogre;
 			Unit* goblin;
 
+			elemental = monsterFactory.produceMagic();
+			ogre = monsterFactory.produceBludgeoning();
+			goblin = monsterFactory.producePiercing();
+
 			master.addMonsterTeam(elemental);
 			master.addMonsterTeam(ogre);
 			master.addMonsterTeam(goblin);
@@ -179,16 +182,16 @@ void GameInterface::createMonsters()
 		Unit* ogre;
 		Unit* goblin;
 
-		elemental = MonsterFactory.produceMagic();
-		ogre = MonsterFactory.produceBludgeoning()
-		goblin = MonsterFactory.producePiercing();
+		elemental = monsterFactory.produceMagic();
+		ogre = monsterFactory.produceBludgeoning();
+		goblin = monsterFactory.producePiercing();
 
 		master.addMonsterTeam(elemental);
 		master.addMonsterTeam(ogre);
 		master.addMonsterTeam(goblin);
 
 		int extraMonsters = monsterNum - 3;
-		Unit** monsters[extraMonsters];
+		Unit** monsters = new Unit*[extraMonsters];
 
 		for(int count = 0; count < monsterNum; count++)
 		{
