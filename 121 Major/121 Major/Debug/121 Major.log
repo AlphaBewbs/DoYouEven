@@ -1,69 +1,26 @@
-﻿Build started 2015/10/26 12:41:45 PM.
+﻿Build started 2015/10/26 3:11:28 PM.
      1>Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bludgeoning.cpp GameInterface.cpp GameMaster.cpp HeroTeam.cpp Magic.cpp Main.cpp Map.cpp Master.cpp MonsterTeam.cpp Piercing.cpp Team.cpp Unit.cpp
-         Unit.cpp
-         Master.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): error C2440: 'initializing': cannot convert from 'unsigned int (__thiscall Map::* )(void)' to 'unsigned int'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: There is no context in which this conversion is possible
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): error C2259: 'Unit': cannot instantiate abstract class
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: due to following members:
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: 'std::string Unit::getUnit(void)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(89): note: see declaration of 'Unit::getUnit'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: 'std::string Unit::getSubClass(void)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(94): note: see declaration of 'Unit::getSubClass'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: 'std::string Unit::getSkill(void)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(99): note: see declaration of 'Unit::getSkill'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: 'int Unit::attack(Unit *)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(108): note: see declaration of 'Unit::attack'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: 'Unit *Unit::clone(void)': is abstract
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\unit.h(124): note: see declaration of 'Unit::clone'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): error C2440: '=': cannot convert from 'Unit (*)[1]' to 'Unit ***'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(16): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(18): error C2276: '*': illegal operation on bound member function expression
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(19): error C2276: '*': illegal operation on bound member function expression
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(35): error C2228: left of '.notify' must have class/struct/union
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(35): note: type is 'Unit *'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(35): note: did you intend to use '->' instead?
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(89): error C3861: 'time': identifier not found
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(91): error C3867: 'Map::getY': non-standard syntax; use '&' to create a pointer to member
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(91): error C2297: '%': illegal, right operand has type 'unsigned int (__thiscall Map::* )(void)'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(92): error C3867: 'Map::getX': non-standard syntax; use '&' to create a pointer to member
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(92): error C2297: '%': illegal, right operand has type 'unsigned int (__thiscall Map::* )(void)'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(111): error C3867: 'Map::getY': non-standard syntax; use '&' to create a pointer to member
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(111): error C2446: '<': no conversion from 'unsigned int (__thiscall Map::* )(void)' to 'int'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(111): note: There is no context in which this conversion is possible
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(111): error C2297: '<': illegal, right operand has type 'unsigned int (__thiscall Map::* )(void)'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(112): error C3867: 'Map::getX': non-standard syntax; use '&' to create a pointer to member
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(112): error C2446: '<': no conversion from 'unsigned int (__thiscall Map::* )(void)' to 'int'
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(112): note: There is no context in which this conversion is possible
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(112): error C2297: '<': illegal, right operand has type 'unsigned int (__thiscall Map::* )(void)'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(127): error C2084: function 'void Master::notify(Unit *)' already has a body
-         c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(33): note: see previous definition of 'notify'
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(143): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\master.cpp(150): error C3861: 'time': identifier not found
-         Map.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\map.cpp(20): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\map.cpp(42): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-         GameInterface.cpp
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(49): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(198): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-         Generating Code...
-     1>c:\users\kyle erwin\source\repos\doyoueven\121 major\121 major\gameinterface.cpp(94): error C4703: potentially uninitialized local pointer variable 'hero' used
-         Compiling...
-         Piercing.cpp
-         MonsterTeam.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
          Main.cpp
-         Magic.cpp
-         HeroTeam.cpp
-         Bludgeoning.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         GameMaster.cpp
-         Team.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.lib" /MACHINE:X86 Debug\Adapter.obj
+         Debug\Bludgeoning.obj
+         Debug\GameInterface.obj
+         Debug\GameMaster.obj
+         Debug\HeroTeam.obj
+         Debug\Magic.obj
+         Debug\Main.obj
+         Debug\Map.obj
+         Debug\Master.obj
+         Debug\MonsterTeam.obj
+         Debug\Team.obj
+         Debug\Piercing.obj
+         Debug\Unit.obj
+     1>Master.obj : error LNK2019: unresolved external symbol "public: __thiscall GameMaster::GameMaster(void)" (??0GameMaster@@QAE@XZ) referenced in function "public: __thiscall Master::Master(void)" (??0Master@@QAE@XZ)
+     1>C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\Debug\121 Major.exe : fatal error LNK1120: 1 unresolved externals
      1>Done Building Project "C:\Users\Kyle Erwin\Source\Repos\DoYouEven\121 Major\121 Major\121 Major.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:09.01
+Time Elapsed 00:00:02.93

@@ -15,11 +15,14 @@ Master::Master()
     monsters = new MonsterTeam;
 
 	map = new Map;
-    unitGrid = new Unit* [map->getX][map->getY];
+	unitGrid = new Unit **[map->getX()];
 
- 		for (unsigned int i = 0; i < *(map->getY); i++)
-			for (unsigned int j = 0; j < *(map->getX); j++)
-					unitGrid [j][i] = 0;
+	for (int j = 0; j < map->getX(); j++)
+		unitGrid[j] = new Unit *[map->getY()];
+
+	for (int i = 0; i < map->getY(); i++)
+		for (int j = 0; j < map->getX(); j++)
+				unitGrid [j][i] = 0;
 }
 
 void Master::attachUnit(Unit* unit)
@@ -154,9 +157,9 @@ void Master::moveMonsters()
 			x = location.x;
 			y = location.y;
 
-			// (rand() % map->rows) + 1
-			//do a random variable from 1-100;
-			int chance;
+			srand(time(0));
+			int chance = rand() % 100 + 1;
+
 			if(chance >= 0 && chance < 25)
 				x++;
 			else if(chance >= 25 && chance < 50)
@@ -181,13 +184,11 @@ bool Master::canUnitAttack(Unit* unit)
 	wsda[2] = map->availableSpace(location.x + 1, location.y);
 	wsda[3] = map->availableSpace(location.x - 1, location.y);
 
-	int rand;
+	int chance = rand() % 4 + 1;;
 	do
 	{
-		// (rand() % map->rows) + 1
-		//do a random variable from 1-100;
 
-	}while(wsda[rand] == false);
+	}while(wsda[chance] == false);
 
-	return wsda[rand];
+	return wsda[chance];
 }

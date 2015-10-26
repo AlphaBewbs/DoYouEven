@@ -1,5 +1,5 @@
 #include "Gamemaster.h"
-#include "Team.h";
+#include "Team.h"
 
 
 #include <iostream>

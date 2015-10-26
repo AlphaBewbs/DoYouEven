@@ -11,11 +11,12 @@ Student Number: 15075754
 
 ********************************************/
 #include "UnitFactory.h"
+#include "Master.h"
 
 int main()
 {
 	Unit** units = new Unit*[100];
-	Unit* tempUnit = nullptr;
+	Unit* tempUnit = 0;
 
 	PlayerFactory playerFactory;
 	MonsterFactory monsterFactory;
@@ -90,7 +91,7 @@ int main()
 	cout << endl;
 	cout << units[15]->getDescription();
 	cout << endl;
-	//to do
+
 	system("pause");
 	return 0;
 }
