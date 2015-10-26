@@ -10,6 +10,16 @@ GameInterface::GameInterface()
 {
 	units = new Unit*[100];
 	cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
+
+	cout << "	°*”˜˜”*°•.¸★★¸.•°*”˜˜”*°" << endl;
+	cout << "(¸.•´ (¸.•´ .•´ ¸¸.•¨¯`•" << endl;
+	cout << "∩ │◥███◣ ╱◥███◣" << endl;
+	cout << "╱◥◣ ◥████◣▓∩▓│∩ ║" << endl;
+	cout << "│╱◥█◣║∩∩∩ ║◥█▓ ▓█◣" << endl;
+	cout << "││∩│ ▓ ║∩田│║▓ ▓ ▓∩ ║" << endl;
+
+Read more: http://loveusms.in/smslist/lang/A/cid/10/page/14#ixzz3pd9QLUOE
+
 }
 GameInterface::~GameInterface()
 {
@@ -275,6 +285,19 @@ void GameInterface::createMonsters()
 					cout << monsters[count]->getDescription() << endl;
 
 			}
+
+			cout << "	Well done!!" << endl;
+			cout << " Now you can start tackling those monsters.. All the best!!" << endl;
+			cout << "             __" << endl;
+			cout << "	.......... /--)" << endl;
+			cout << "	........./.../" << endl;
+			cout << "	......./....(__ ____" << endl;
+			cout << "	▓▓..........((_ i___)" << endl;
+			cout << "	▓▓..........((_ i___)" << endl;
+			cout << "	▓▓..........((_ i___)" << endl;
+			cout << "	▓▓---.___((_i__ )" << endl;
+
+
 		}
 	}
 }
