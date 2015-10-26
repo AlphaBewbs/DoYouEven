@@ -1,15 +1,22 @@
-void Move(char input)
+//what the fuck needs to happen in the turn function
+/*
+Player:
+	Ask the user to move each hero;
+	if it can fight ask the user.
+		if yes	then attack else leave it
+		notify the unit. eg it is attacking
+	End turn.
+
+computer:
+	randomly move the enemies. (maybe we could calculate the closet hero)
+	if it can attack then randomly decide 50/50 if it will attack a hero;
+		notify the unit... eg it is attacking
+	end.
+
+*/
+
+//this will go in Master
+moveEnemies()
 {
-  input = input.toUpper();
-
-  switch(input)
-  {
-    case 'W': y++; break;
-    case 'S': y--; break;
-    case 'D': x++; break;
-    case 'A': x--; break;
-  }
-
-  setHero(x, y);
 
 }
