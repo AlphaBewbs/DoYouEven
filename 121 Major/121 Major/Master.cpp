@@ -22,7 +22,7 @@ Master::Master()
 
 	for (int i = 0; i < map->getY(); i++)
 		for (int j = 0; j < map->getX(); j++)
-				unitGrid [j][i] = 0;
+				unitGrid [j][i] = NULL;
 }
 
 void Master::attachUnit(Unit* unit)
@@ -75,11 +75,6 @@ void Master::attack(Unit* unit, Team* team)
 	team->takeDamage(unit);
 }
 
-void Master::printMap()
-{
-    map->printMap();
-}
-
 
 void Master::addToMap(Unit* unit)
 {
@@ -93,14 +88,19 @@ void Master::addToMap(Unit* unit)
 		y = (rand() % (map->getY()));
 	} while (!map->availableSpace(x, y));
 
-	cout << "Adding player to position [" << x << ',' << y << ']' << endl;
-	//@NOTE THIS IS WHATS FUCKING UP
 	unitGrid[x][y] = unit;
 
-	if(type == "Mage" || type == "Soldier" || type == "Thief")
+	if (type == "Mage" || type == "Soldier" || type == "Thief")
+	{
+		cout << "Adding player to position [" << x << ',' << y << ']' << endl;
 		map->addUnit('H', x, y);
+	}
 	else
+	{
+		cout << "Adding Monster to position [" << x << ',' << y << ']' << endl;
 		map->addUnit('M', x, y);
+	}
+		
 }
 
 //@NOTE we dont need this
@@ -119,8 +119,8 @@ Point Master::locateUnit(Unit* unit)
         for (int j = 0; j < map->getX(); j++)
             if(unitGrid[i][j] == unit)
             {
-				location.y = i;
-                location.x = j;
+				location.y = j;
+                location.x = i;
                 return location;
             }
 }
@@ -156,16 +156,17 @@ void Master::moveMonsters()
 
 		int x = location.x;
 		int y = location.y;
-
+		
 		map->addUnit('K', x, y);
+		
 		srand(time(0));
+		int chance = rand() % 100 + 1;
 		do {
 			x = location.x;
 			y = location.y;
 
-			srand(time(0));
-			int chance = rand() % 100 + 1;
-
+			chance = rand() % 100 + 1;
+			cout << '\t' << chance << endl;
 			if(chance >= 0 && chance < 25)
 				x++;
 			else if(chance >= 25 && chance < 50)
@@ -181,11 +182,10 @@ void Master::moveMonsters()
 
 		unitGrid[location.x][location.y] = NULL;
 
-		cout << "unit" << endl;
+		/*cout << "unit" << endl;
 		cout << location.x << '\t' << location.y << endl;
-		cout << x << '\t' << y << endl;
+		cout << x << '\t' << y << endl;*/
 		map->addUnit('M', x, y);
-		cout << endl;
 	}
 }//@NOTE THIS SHOULD FUCKING WORK
 

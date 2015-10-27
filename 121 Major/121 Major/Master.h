@@ -34,7 +34,6 @@ class Master : public GameMaster
 		virtual bool moveUnit(Unit*, char);
 		void attack(Unit*, Team*);
 
-		virtual void printMap();
 		virtual void addToMap(Unit*);
 
 
