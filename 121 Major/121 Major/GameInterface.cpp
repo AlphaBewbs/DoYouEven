@@ -11,7 +11,7 @@ using namespace std;
 
 GameInterface::GameInterface()
 {
-	cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
+	std::cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
 
 //Read more: http://loveusms.in/smslist/lang/A/cid/10/page/14#ixzz3pd9QLUOE
 
@@ -25,49 +25,49 @@ void GameInterface::chooseHero()
 {
 	int choice, size;
 
-	cout << "Time to choose your team!" << endl;
-	cout << "How many heros would you like?";
+	std::cout << "Time to choose your team!" << endl;
+	std::cout << "How many heros would you like?";
 
 	cin >> size;
 
 	while(size <= 0 || size > 5)
 	{
-		cout << "err... ummm... How about a number betwean 1 and 5?" << endl;
-		cout << "Lets try that again" << endl;
-		cout << "How many heros would you like?";
+		std::cout << "err... ummm... How about a number betwean 1 and 5?" << endl;
+		std::cout << "Lets try that again" << endl;
+		std::cout << "How many heros would you like?";
 		cin >> size;
 	}
-	cout << endl << "Excellent! Lets build your team!" << endl << endl;
+	std::cout << endl << "Excellent! Lets build your team!" << endl << endl;
 
 	for (int i = 0; i < size; i++)
 	{
-		cout << "Choose your hero number " << i << "!" << endl;
-			cout << "\t1) Mage" << endl;
-			cout << "\t2) Thief" << endl;
-			cout << "\t3) Soldier" << endl;
+		std::cout << "Choose your hero number " << i << "!" << endl;
+			std::cout << "\t1) Mage" << endl;
+			std::cout << "\t2) Thief" << endl;
+			std::cout << "\t3) Soldier" << endl;
 
 		cin >> choice;
 
 		while (choice < 1 || choice > 3)
 		{
-			cout << "Thats not a hero..." << endl;
-			cout << "Choose your hero!" << endl;
-			cout << "\t1) Mage" << endl;
-			cout << "\t2) Thief" << endl;
-			cout << "\t3) Soldier" << endl;
+			std::cout << "Thats not a hero..." << endl;
+			std::cout << "Choose your hero!" << endl;
+			std::cout << "\t1) Mage" << endl;
+			std::cout << "\t2) Thief" << endl;
+			std::cout << "\t3) Soldier" << endl;
 
 			cin >> choice;
 		}
 		//@NOTE MAYBE PUT SOME IF STATEMENTS TO MAKE THIS COOLER
-		cout << endl << "you chose this one... really? well okay!" << endl;
+		std::cout << endl << "you chose this one... really? well okay!" << endl;
 
 //@NOTE come back here
-		cout << "Well here he is...." << endl;
-		cout << "('.')" << endl;
-		cout << "<)'(>" << endl;
-		cout << "_/'/_ " << endl;
+		std::cout << "Well here he is...." << endl;
+		std::cout << "('.')" << endl;
+		std::cout << "<)'(>" << endl;
+		std::cout << "_/'/_ " << endl;
 
-		cout << "...ONWARD THEN!" << endl;
+		std::cout << "...ONWARD THEN!" << endl;
 
 		Unit* hero = NULL;
 		switch (choice)
@@ -93,56 +93,39 @@ void GameInterface::createMonsters()
 {
 	int monsterNum;
 
-	cout << "Now lets create some monsters for you to kill!! " << endl;
+	std::cout << "Now lets create some monsters for you to kill!! " << endl;
 
-	cout << "So how many monsters do you think you can take on...?" << endl;
-	cout << "I think you can at least handle 3 of them..." << endl;
-	cout << "How about you choose a number between 3 and 7 then..." << endl;
+	std::cout << "So how many monsters do you think you can take on...?" << endl;
+	std::cout << "I think you can at least handle 3 of them..." << endl;
+	std::cout << "How about you choose a number between 3 and 7 then..." << endl;
 
 	cin >> monsterNum;
 
 	while(monsterNum < 3 || monsterNum > 7)
 	{
-		cout << endl;
-		cout << "How about you choose a number between 3 and 7 then...";
+		std::cout << endl;
+		std::cout << "How about you choose a number between 3 and 7 then...";
 		cin >> monsterNum;
 	}
 
-	if(monsterNum == 3)
-	{
-		Unit* elemental;
-		Unit* ogre;
-		Unit* goblin;
+	Unit* elemental = monsterFactory.produceMagic();
+	Unit* ogre = monsterFactory.produceBludgeoning();
+	Unit* goblin = monsterFactory.producePiercing();
 
-		elemental = monsterFactory.produceMagic();
-		ogre = monsterFactory.produceBludgeoning();
-		goblin = monsterFactory.producePiercing();
-		cout << endl;
+	std::cout << endl;
 
-		master.addMonsterTeam(elemental);
-		master.addMonsterTeam(ogre);
-		master.addMonsterTeam(goblin);
-	}
-	else
-	{
-		Unit* elemental;
-		Unit* ogre;
-		Unit* goblin;
+	master.addMonsterTeam(elemental);
+	master.addMonsterTeam(ogre);
+	master.addMonsterTeam(goblin);
 
-		elemental = monsterFactory.produceMagic();
-		ogre = monsterFactory.produceBludgeoning();
-		goblin = monsterFactory.producePiercing();
-		cout << endl;
-
-		master.addMonsterTeam(elemental);
-		master.addMonsterTeam(ogre);
-		master.addMonsterTeam(goblin);
-
-		int extraMonsters = monsterNum - 3;
-		Unit** monsters = new Unit*[extraMonsters];
+	int extraMonsters = monsterNum - 3;
 		
+	if(extraMonsters > 0)
+	{
+		Unit** monsters = new Unit*[extraMonsters];
+
 		for(int count = 0; count < extraMonsters; count++)
-		{cout << "boobs" << endl;
+		{
 			srand (time(NULL));
 			size_t monsterType = rand() % 3 + 1;
 
@@ -164,8 +147,8 @@ void GameInterface::createMonsters()
 
 		}
 	}
-	cout << "Well done!!" << endl;
-	cout << "Now you can start tackling those monsters.. All the best!!" << endl;
+	std::cout << "Well done!!" << endl;
+	std::cout << "Now you can start tackling those monsters.. All the best!!" << endl;
 }
 
 void GameInterface::print()

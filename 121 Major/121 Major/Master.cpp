@@ -89,14 +89,18 @@ void Master::addToMap(Unit* unit)
 	//Put player in a random position
 	srand(time(0));
 	do {
- 		x = (rand() % (map->getY())) + 1; 
-		y = (rand() % (map->getX())) + 1;
+ 		x = (rand() % (map->getX())); 
+		y = (rand() % (map->getY()));
 	} while (!map->availableSpace(x, y));
 
 	cout << "Adding player to position [" << x << ',' << y << ']' << endl;
+	//@NOTE THIS IS WHATS FUCKING UP
 	unitGrid[x][y] = unit;
 
-	map->addUnit('M', x, y);
+	if(type == "Mage" || type == "Soldier" || type == "Thief")
+		map->addUnit('H', x, y);
+	else
+		map->addUnit('M', x, y);
 }
 
 //@NOTE we dont need this

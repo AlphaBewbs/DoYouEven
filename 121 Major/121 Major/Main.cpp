@@ -19,10 +19,10 @@ int main()
 	GameInterface gi;
 	gi.createMonsters();
 	gi.print();
-	system("pause");
+	//system("pause");
 	gi.moveMonsters();
 	gi.print();
-	system("pause");
+	//system("pause");
 	return 0;
 }
 
