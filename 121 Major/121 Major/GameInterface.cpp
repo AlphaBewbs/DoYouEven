@@ -1,11 +1,12 @@
 #include "GameInterface.h"
 #include <iostream>
 #include <stdlib.h>
-
-#include "Unit.h"
-
 #include <stdio.h>
 #include <time.h>
+
+#include <vector>
+
+#include "Unit.h"
 
 using namespace std;
 
@@ -76,7 +77,7 @@ void GameInterface::chooseHero()
 				break;
 		}
 		cout << "What should we name this hero? ";
-		cin >> name;
+		std::getline (std::cin,name);
 		hero->setName(name);
 
 		std::cout << "Well here he is...." << endl;
@@ -98,6 +99,15 @@ void GameInterface::moveHero()
 
 void GameInterface::createMonsters()
 {
+	srand (time(NULL));
+
+	/*string namesArray[] = {"Garry", "Bob", "Slug", "Mom", "Ex Girlfriend", "Saturday", "Leah"};
+
+	vector<string> names;
+
+	for (int j = 0; j < 7; j++)
+	names.push_back(namesArray[j]);*/
+
 	int monsterNum;
 
 	std::cout << "Now lets create some monsters for you to kill!! " << endl;
@@ -119,6 +129,22 @@ void GameInterface::createMonsters()
 	Unit* ogre = monsterFactory.produceBludgeoning();
 	Unit* goblin = monsterFactory.producePiercing();
 
+
+	/*int nameChoice = rand() % 7;
+	elemental->setName(names.at(nameChoice));
+	names.erase (names.begin() + nameChoice);
+
+	nameChoice = rand() % 7;
+	ogre->setName("ERA");
+	names.erase (names.begin() + nameChoice);
+
+	nameChoice = rand() % 7;
+	goblin->setName("Bob");
+	names.erase (names.begin() + nameChoice);*/
+
+	elemental->setName("gReg");
+	ogre->setName("ERA");
+	goblin->setName("Bob");
 	std::cout << endl;
 
 	master.addMonsterTeam(elemental);
@@ -133,7 +159,6 @@ void GameInterface::createMonsters()
 
 		for(int count = 0; count < extraMonsters; count++)
 		{
-			srand (time(NULL));
 			size_t monsterType = rand() % 3 + 1;
 
 			if (monsterType == 1)

@@ -32,7 +32,7 @@ void Master::attachUnit(Unit* unit)
 
 void Master::detachUnit(Unit* inputUnit)
 {
-    //@TODO and his one
+    //@TODO and this one
 }
 
 void Master::notify(Unit* unit)
@@ -107,12 +107,12 @@ void Master::addToMap(Unit* unit)
 
 	if (type == "Mage" || type == "Soldier" || type == "Thief")
 	{
-		cout << "Adding hero " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
+		cout << "Adding Hero " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
 		map->addUnit('H', x, y);
 	}
 	else
 	{
-		cout << "Adding Monster to position [" << x << ',' << y << ']' << endl;
+		cout << "Adding Monster " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
 		map->addUnit('M', x, y);
 	}
 
