@@ -73,6 +73,9 @@ class Bludgeoning : public Unit
 		*/
 		void update();
 
+		virtual void setName(string _name) { name = _name; };
+		virtual string getName() { return name; };
+
 		//Mediator
 		virtual string event();
 		virtual void act();
