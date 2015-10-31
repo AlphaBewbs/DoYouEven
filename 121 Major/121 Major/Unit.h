@@ -67,6 +67,8 @@ class Unit
 		*/
 		string unit;	//Either a player/hero or monster/mob
 
+		string name;
+
 		//Observer-Mediator
 		Master* master;
 
@@ -133,9 +135,12 @@ class Unit
 		/**
 		*		This functins forms part of the observer design pattern to update the
 		*		state of the Unit.
-		*		
+		*
 		*/
 		virtual void update() = 0;
+
+		virtual void setName(string) = 0;
+		virtual string getName() = 0;
 };
 //static int count = 0;
 

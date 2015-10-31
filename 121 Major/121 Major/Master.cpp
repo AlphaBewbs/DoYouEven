@@ -85,6 +85,11 @@ void Master::attack(Unit* unit, Team* team)
 	team->takeDamage(unit);
 }
 
+void attack(Unit* attacker, Unit* enemy)
+{
+	attacker->attack(enemy);
+}
+
 
 void Master::addToMap(Unit* unit)
 {
@@ -102,7 +107,7 @@ void Master::addToMap(Unit* unit)
 
 	if (type == "Mage" || type == "Soldier" || type == "Thief")
 	{
-		cout << "Adding player to position [" << x << ',' << y << ']' << endl;
+		cout << "Adding hero " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
 		map->addUnit('H', x, y);
 	}
 	else
@@ -200,23 +205,42 @@ void Master::moveMonsters()
 	}
 }//@NOTE THIS SHOULD FUCKING WORK
 
-bool Master::canUnitAttack(Unit* unit)
+Unit * Master::canUnitAttack(Unit* unit)
 {
-	Point location = this->locateUnit(unit);
+	Point locationA = this->locateUnit(unit);// A for attacker
 
-	bool wsda[4];
-	wsda[0] = map->availableSpace(location.x, location.y + 1);
-	wsda[1] = map->availableSpace(location.x, location.y - 1);
-	wsda[2] = map->availableSpace(location.x + 1, location.y);
-	wsda[3] = map->availableSpace(location.x - 1, location.y);
-
-	int chance = rand() % 4 + 1;;
-	do
+	if(unit->getUnit() == "Player")
 	{
+		for (int j = 0; j < monsters->getSize(); j++)
+		{
+			Point locationE = this->locateUnit(monsters->getUnitAt(j)); // E for enemy
 
-	}while(wsda[chance] == false);
+			int calculation = locationA.x - locationE.x;
+			calculation += locationA.y - locationE.y;
 
-	return wsda[chance];
+			if(calculation <= 2 && calculation >= -2)
+			{
+				return monsters->getUnitAt(j);
+			}
+		}
+	}
+	else if (unit->getUnit() == "Monster")
+	{
+		for (int j = 0; j < heros->getSize(); j++)
+		{
+			Point locationE = this->locateUnit(heros->getUnitAt(j)); // E for enemy
+
+			int calculation = locationA.x - locationE.x;
+			calculation += locationA.y - locationE.y;
+
+			if(calculation <= 2 && calculation >= -2)
+			{
+				return heros->getUnitAt(j);
+			}
+		}
+	}
+
+	return 0;
 }
 
 void Master::print()

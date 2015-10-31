@@ -16,8 +16,6 @@ Student Number: 15075754
 
 #include "GameMaster.h"
 #include "Map.h"
-//#include "Unit.h"
-
 
 using namespace std;
 
@@ -32,7 +30,9 @@ class Master : public GameMaster
     	virtual	void attachUnit(Unit*);
 		virtual void detachUnit(Unit*);
 		virtual void moveHero();
-		void attack(Unit*, Team*);
+
+		void attack(Unit*, Team*); //for COR action
+		void attack(Unit*, Unit*); //for hero vs monster action
 
 		virtual void addToMap(Unit*);
 
@@ -47,7 +47,7 @@ class Master : public GameMaster
 		virtual void removeDestroyedUnits();
 
 		void print();
-		bool canUnitAttack(Unit*);
+		Unit* canUnitAttack(Unit*);
 
 };
 

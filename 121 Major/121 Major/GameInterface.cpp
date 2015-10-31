@@ -24,6 +24,7 @@ GameInterface::~GameInterface()
 void GameInterface::chooseHero()
 {
 	int choice, size;
+	string name;
 
 	std::cout << "Time to choose your team!" << endl;
 	std::cout << "How many heros would you like?";
@@ -41,7 +42,7 @@ void GameInterface::chooseHero()
 
 	for (int i = 0; i < size; i++)
 	{
-		std::cout << "Choose your hero number " << i << "!" << endl;
+		std::cout << "Choose your hero number " << i+1 << "!" << endl;
 			std::cout << "\t1) Mage" << endl;
 			std::cout << "\t2) Thief" << endl;
 			std::cout << "\t3) Soldier" << endl;
@@ -61,14 +62,6 @@ void GameInterface::chooseHero()
 		//@NOTE MAYBE PUT SOME IF STATEMENTS TO MAKE THIS COOLER
 		std::cout << endl << "you chose this one... really? well okay!" << endl;
 
-//@NOTE come back here
-		std::cout << "Well here he is...." << endl;
-		std::cout << "('.')" << endl;
-		std::cout << "<)'(>" << endl;
-		std::cout << "_/'/_ " << endl;
-
-		std::cout << "...ONWARD THEN!" << endl;
-
 		Unit* hero = NULL;
 		switch (choice)
 		{
@@ -82,7 +75,16 @@ void GameInterface::chooseHero()
 				hero = playerFactory.produceBludgeoning();
 				break;
 		}
+		cout << "What should we name this hero? ";
+		cin >> name;
+		hero->setName(name);
 
+		std::cout << "Well here he is...." << endl;
+		std::cout << "('.')" << endl;
+		std::cout << "<)'(>" << endl;
+		std::cout << "_/'/_ " << endl;
+
+		std::cout << "...ONWARD THEN!" << endl;
 		//Tells the master to aadd a unit to the player team
 		master.addPlayerTeam(hero);
 	}
