@@ -79,6 +79,13 @@ class GameInterface
 		*/
 		void chooseHero();
 
+		//@NOTE new
+		/*
+		*
+		*
+		*/
+		void moveHero();
+
 		/**
 		*		This function allows the user to choose the amount of monsters that
 		* 	they want.

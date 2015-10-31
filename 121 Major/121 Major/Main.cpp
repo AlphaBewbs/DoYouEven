@@ -17,7 +17,13 @@ Student Number: 15075754
 int main()
 {
 	GameInterface gi;
+	gi.chooseHero();
+	gi.print();
+	system("pause");
 	gi.createMonsters();
+	gi.print();
+	system("pause");
+	gi.moveHero();
 	gi.print();
 	system("pause");
 	gi.moveMonsters();
@@ -30,7 +36,7 @@ int main()
 
 /*int main()
 {
-	
+
 	Unit** units = new Unit*[100];
 	Unit* tempUnit = 0;
 

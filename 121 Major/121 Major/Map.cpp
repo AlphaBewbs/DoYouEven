@@ -58,21 +58,28 @@ void Map::printMap()
 bool Map::Move(int x, int y, int prevX, int prevY)
 {
 	if(y > mapSizeY)
+	{
+		std::cout << "66" << std::endl;
 		return false;
+	}
 	else if(x > mapSizeX)
+	{
+		std::cout << "68" << std::endl;
 		return false;
+	}
 
 
-	if(x != prevX + 1 || x != prevX - 1)
-		return false;
-
-	if(y != prevY + 1 || y != prevY - 1)
-		return false;
 
 	if(MapContents[x][y] == ' ')
+	{
+		std::cout << "87" << std::endl;
 		return true;
+	}
 	else
+	{
+		std::cout << "92" << std::endl;
 		return false;
+	}
 }
 
 bool Map::availableSpace(int x, int y)

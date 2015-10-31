@@ -41,30 +41,40 @@ void Master::notify(Unit* unit)
 }
 
 //@CHANGED
-bool Master::moveUnit(Unit* unit, char direction)
+void Master::moveHero()
 {
-	Point location = locateUnit(unit);
-	int y = location.y;
-	int x = location.x;
+	for (int j = 0; j < heros->getSize(); j++)
+	{
+		Unit * unit = heros->getUnitAt(j);
+		Point location = locateUnit(unit);
 
-    direction = toupper(direction);
-    switch(direction)
-    {
-        case 'W': y++; break;
-        case 'S': y--; break;
-        case 'D': x++; break;
-        case 'A': x--; break;
-    }
-	
-	if(map->Move(x, y, location.x, location.y))
-	{
-		unitGrid[x][y] = unitGrid[location.x][location.y];
-		unitGrid[location.x][location.y] = 0;
-		return true;
-	}
-	else
-	{
-		return false;
+		int y = location.y;
+		int x = location.x;
+
+		char direction;
+		cout << "Where do you wanna go? ";
+		cin >> direction;
+
+		direction = toupper(direction);
+		switch (direction)
+		{
+		case 'W': x--; break;
+		case 'S': x++; break;
+		case 'D': y++; break;
+		case 'A': y--; break;
+		}
+
+		if (map->Move(x, y, location.x, location.y))
+		{
+			unitGrid[x][y] = unitGrid[location.x][location.y];
+			unitGrid[location.x][location.y] = NULL;
+			map->addUnit('K', location.x, location.y);
+			map->addUnit('H', x, y);
+		}
+		else
+		{
+			cout << "[FAILURE]" << endl;
+		}
 	}
 
 }
@@ -84,7 +94,7 @@ void Master::addToMap(Unit* unit)
 	//Put player in a random position
 	srand(time(0));
 	do {
- 		x = (rand() % (map->getX())); 
+ 		x = (rand() % (map->getX()));
 		y = (rand() % (map->getY()));
 	} while (!map->availableSpace(x, y));
 
@@ -100,7 +110,7 @@ void Master::addToMap(Unit* unit)
 		cout << "Adding Monster to position [" << x << ',' << y << ']' << endl;
 		map->addUnit('M', x, y);
 	}
-		
+
 }
 
 //@NOTE we dont need this
@@ -140,6 +150,7 @@ void Master::addMonsterTeam(Unit* monster)
 	monsters->addUnit(monster);
 	addToMap(monster);
 }
+
 void Master::addPlayerTeam(Unit* player)
 {
 	heros->addUnit(player);
@@ -156,17 +167,17 @@ void Master::moveMonsters()
 
 		int x = location.x;
 		int y = location.y;
-		
-		map->addUnit('K', x, y);
-		
-		srand(time(0));
-		int chance = rand() % 100 + 1;
+
+		map->addUnit(' ', x, y);
+
+		int chance = 0;
 		do {
 			x = location.x;
 			y = location.y;
 
 			chance = rand() % 100 + 1;
 			cout << '\t' << chance << endl;
+
 			if(chance >= 0 && chance < 25)
 				x++;
 			else if(chance >= 25 && chance < 50)
@@ -176,7 +187,7 @@ void Master::moveMonsters()
 			else
 				x--;
 
-		} while (map->Move(x, y, location.x, location.y));
+		} while (!map->Move(x, y, location.x, location.y));
 
 		unitGrid[x][y] = unitGrid[location.x][location.y];
 

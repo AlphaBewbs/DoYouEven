@@ -31,7 +31,7 @@ class Master : public GameMaster
 		Master();
     	virtual	void attachUnit(Unit*);
 		virtual void detachUnit(Unit*);
-		virtual bool moveUnit(Unit*, char);
+		virtual void moveHero();
 		void attack(Unit*, Team*);
 
 		virtual void addToMap(Unit*);

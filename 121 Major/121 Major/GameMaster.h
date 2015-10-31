@@ -41,12 +41,12 @@ class GameMaster
 
 		virtual	void attachUnit(Unit*) = 0;
 		virtual void detachUnit(Unit*)  = 0;
-		virtual bool moveUnit(Unit*, char) = 0;
+		virtual void moveHero() = 0;
 
 		//@CHANGED This getUnitAt function is removed
 		//Unit* getUnitAt(int);
 
-		virtual void printMap() = 0;
+		//virtual void printMap() = 0;
 
 		virtual void notify(Unit*) = 0;
 		virtual Point locateUnit(Unit*) = 0;

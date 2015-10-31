@@ -88,6 +88,11 @@ void GameInterface::chooseHero()
 	}
 }
 
+void GameInterface::moveHero()
+{
+	master.moveHero();
+}
+
 
 void GameInterface::createMonsters()
 {
@@ -119,7 +124,7 @@ void GameInterface::createMonsters()
 	master.addMonsterTeam(goblin);
 
 	int extraMonsters = monsterNum - 3;
-		
+
 	if(extraMonsters > 0)
 	{
 		Unit** monsters = new Unit*[extraMonsters];
