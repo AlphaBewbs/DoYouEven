@@ -42,20 +42,14 @@ class GameInterface
 		MonsterFactory monsterFactory;
 
 
-		/*@NOTE DONT NEED THIS ANYMORE
-		int playerSize, monsterSize;
-
-		Unit** playerUnits = new Unit*[playerSize];
-		Unit** monsterUnits = new Unit*[monsterSize];*/
-
 		//@NOTE new
-		Master master;
+		Master* master;
 
 	public:
 		/**
 		*		The constructor that creats a dynamic array for storing all of the units.
 		*/
-		GameInterface();
+		GameInterface(Master *);
 
 		/**
 		*		The destructor to de-allocate memory.
@@ -93,6 +87,7 @@ class GameInterface
 		void createMonsters();
 
 		void print();
+
 
 
 };

@@ -1,4 +1,4 @@
-#include "Gamemaster.h"
+#include "GameMaster.h"
 #include "Team.h"
 
 

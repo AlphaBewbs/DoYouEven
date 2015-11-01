@@ -52,7 +52,7 @@ void Master::moveHero()
 		int x = location.x;
 
 		char direction;
-		cout << "Where do you wanna go? ";
+		cout << "Where do you want to go? ";
 		cin >> direction;
 
 		direction = toupper(direction);
@@ -68,8 +68,24 @@ void Master::moveHero()
 		{
 			unitGrid[x][y] = unitGrid[location.x][location.y];
 			unitGrid[location.x][location.y] = NULL;
-			map->addUnit('K', location.x, location.y);
+			map->addUnit(' ', location.x, location.y);
 			map->addUnit('H', x, y);
+
+      Unit* enemy = canUnitAttack(heros->getUnitAt(j));
+
+      if(enemy != 0)
+      {
+        char ans;
+        cout << (heros->getUnitAt(j))->getName() << " can attack " << enemy->getName() << ". Would you life to attack?";
+        cin >> ans;
+
+        if(toupper(ans) == 'Y')
+        {
+          (heros->getUnitAt(j))->attack(enemy);
+          cout << "attacked" << endl;
+        }
+      }
+
 		}
 		else
 		{
@@ -246,4 +262,10 @@ Unit * Master::canUnitAttack(Unit* unit)
 void Master::print()
 {
 	map->printMap();
+}
+
+//@NOTE new
+char Master::getSpace(int x, int y)
+{
+	return map->getSpace(x, y);
 }

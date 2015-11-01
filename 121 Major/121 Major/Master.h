@@ -49,6 +49,9 @@ class Master : public GameMaster
 		void print();
 		Unit* canUnitAttack(Unit*);
 
+		//@NOTE new for the gui
+		char getSpace(int y, int x);
+
 };
 
 #endif

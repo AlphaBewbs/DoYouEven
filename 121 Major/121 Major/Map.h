@@ -24,7 +24,7 @@ class Map
 		//@CHANGED
 		unsigned int getY() { return mapSizeY; };
 		unsigned int getX() { return mapSizeX; };
-
+		char getSpace(int x, int y) { return MapContents[x][y]; };
 
 };
 #endif

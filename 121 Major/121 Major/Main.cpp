@@ -13,10 +13,17 @@ Student Number: 15075754
 #include "UnitFactory.h"
 #include "Master.h"
 #include "GameInterface.h"
+#include "GUI.h"
 
-int main()
+Gtk::Window* pApplicationWindow = NULL;
+
+int main (int argc, char **argv)
 {
-	GameInterface gi;
+	GUI myGUI(argc, argv);
+	
+
+
+	/*GameInterface gi;
 	gi.chooseHero();
 	gi.print();
 	system("pause");
@@ -28,7 +35,7 @@ int main()
 	system("pause");
 	gi.moveMonsters();
 	gi.print();
-	system("pause");
+	system("pause");*/
 	return 0;
 }
 

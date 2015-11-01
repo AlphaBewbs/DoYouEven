@@ -10,13 +10,12 @@
 
 using namespace std;
 
-GameInterface::GameInterface()
+GameInterface::GameInterface(Master* _master)
 {
 	std::cout << "WELCOME TO AN EPIC ADVENTURE" << endl;
-
-//Read more: http://loveusms.in/smslist/lang/A/cid/10/page/14#ixzz3pd9QLUOE
-
+	master = _master;
 }
+
 GameInterface::~GameInterface()
 {
 	//@NOTE
@@ -87,13 +86,13 @@ void GameInterface::chooseHero()
 
 		std::cout << "...ONWARD THEN!" << endl;
 		//Tells the master to aadd a unit to the player team
-		master.addPlayerTeam(hero);
+		master->addPlayerTeam(hero);
 	}
 }
 
 void GameInterface::moveHero()
 {
-	master.moveHero();
+	master->moveHero();
 }
 
 
@@ -147,9 +146,9 @@ void GameInterface::createMonsters()
 	goblin->setName("Bob");
 	std::cout << endl;
 
-	master.addMonsterTeam(elemental);
-	master.addMonsterTeam(ogre);
-	master.addMonsterTeam(goblin);
+	master->addMonsterTeam(elemental);
+	master->addMonsterTeam(ogre);
+	master->addMonsterTeam(goblin);
 
 	int extraMonsters = monsterNum - 3;
 
@@ -164,17 +163,17 @@ void GameInterface::createMonsters()
 			if (monsterType == 1)
 			{
 				monsters[count] = elemental->clone(); //prototype
-				master.addMonsterTeam(monsters[count]);
+				master->addMonsterTeam(monsters[count]);
 			}
 			else if (monsterType == 2)
 			{
 				monsters[count] = ogre->clone(); //prototype
-				master.addMonsterTeam(monsters[count]);
+				master->addMonsterTeam(monsters[count]);
 			}
 			else if (monsterType == 3)
 			{
 				monsters[count] = goblin->clone(); //prototype
-				master.addMonsterTeam(monsters[count]);
+				master->addMonsterTeam(monsters[count]);
 			}
 
 		}
@@ -185,10 +184,10 @@ void GameInterface::createMonsters()
 
 void GameInterface::print()
 {
-	master.print();
+	master->print();
 }
 
 void GameInterface::moveMonsters()
 {
-	master.moveMonsters();
+	master->moveMonsters();
 }
