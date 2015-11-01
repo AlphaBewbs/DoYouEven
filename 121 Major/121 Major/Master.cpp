@@ -70,26 +70,25 @@ void Master::moveHero()
 			unitGrid[location.x][location.y] = NULL;
 			map->addUnit(' ', location.x, location.y);
 			map->addUnit('H', x, y);
-
       Unit* enemy = canUnitAttack(heros->getUnitAt(j));
 
       if(enemy != 0)
       {
         char ans;
-        cout << (heros->getUnitAt(j))->getName() << " can attack " << enemy->getName() << ". Would you life to attack?";
+        cout << (heros->getUnitAt(j))->getName() << " can attack " << enemy->getName() << ". Would you like to attack?";
         cin >> ans;
 
         if(toupper(ans) == 'Y')
         {
           (heros->getUnitAt(j))->attack(enemy);
-          cout << "attacked" << endl;
         }
       }
 
 		}
 		else
 		{
-			cout << "[FAILURE]" << endl;
+			cout << "Can not move there.." << endl;
+      j--
 		}
 	}
 
@@ -110,10 +109,10 @@ void attack(Unit* attacker, Unit* enemy)
 void Master::addToMap(Unit* unit)
 {
 	int x, y;
-	string type = unit->getSubClass();
+  string type = unit->getUnit();
+	string subClass = unit->getSubClass();
 
 	//Put player in a random position
-	srand(time(0));
 	do {
  		x = (rand() % (map->getX()));
 		y = (rand() % (map->getY()));
@@ -121,15 +120,31 @@ void Master::addToMap(Unit* unit)
 
 	unitGrid[x][y] = unit;
 
-	if (type == "Mage" || type == "Soldier" || type == "Thief")
-	{
-		cout << "Adding Hero " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
-		map->addUnit('H', x, y);
-	}
+  if(type = "Player")
+  {
+    cout << "Adding Hero " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
+
+    if (subClass == "Mage")
+      map->addUnit('M', x, y);
+
+    if (subClass == "Soldier")
+      map->addUnit('S', x, y);
+
+    if (subClass == "Thief")
+      map->addUnit('T', x, y);
+  }
 	else
 	{
 		cout << "Adding Monster " << unit->getName() << " to position [" << x << ',' << y << ']' << endl;
-		map->addUnit('M', x, y);
+
+    if (subClass == "Elemental")
+      map->addUnit('E', x, y);
+
+    if (subClass == "Ogre")
+      map->addUnit('O', x, y);
+
+    if (subClass == "Goblin")	
+      map->addUnit('T', x, y);
 	}
 
 }
@@ -188,6 +203,7 @@ void Master::moveMonsters()
 
 		int x = location.x;
 		int y = location.y;
+    int moveCounter = 0;
 
 		map->addUnit(' ', x, y);
 
@@ -197,7 +213,6 @@ void Master::moveMonsters()
 			y = location.y;
 
 			chance = rand() % 100 + 1;
-			cout << '\t' << chance << endl;
 
 			if(chance >= 0 && chance < 25)
 				x++;
@@ -207,6 +222,15 @@ void Master::moveMonsters()
 				y--;
 			else
 				x--;
+
+      moveCounter++;
+
+      if(moveCounter >= 20)
+      {
+        cout << enemy->getName() << " could not move.." << endl;
+        break;
+      }
+
 
 		} while (!map->Move(x, y, location.x, location.y));
 
@@ -231,10 +255,11 @@ Unit * Master::canUnitAttack(Unit* unit)
 		{
 			Point locationE = this->locateUnit(monsters->getUnitAt(j)); // E for enemy
 
-			int calculation = locationA.x - locationE.x;
-			calculation += locationA.y - locationE.y;
+			int calcX = locationA.x - locationE.x;
+			int calcY = locationA.y - locationE.y;
 
-			if(calculation <= 2 && calculation >= -2)
+
+			if((calcX > -1 && calcX < 1) && (calcY > -1 && calcY < 1))
 			{
 				return monsters->getUnitAt(j);
 			}

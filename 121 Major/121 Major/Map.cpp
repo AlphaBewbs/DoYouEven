@@ -10,8 +10,8 @@ using namespace std;
 Map::Map(char* fileName)
 {
     FileLocation = fileName;
-    mapSizeX = 20;
-    mapSizeY = 21;
+    mapSizeX = 10;
+    mapSizeY = 10;
     setMap();
 }
 
@@ -59,12 +59,10 @@ bool Map::Move(int x, int y, int prevX, int prevY)
 {
 	if(y > mapSizeY)
 	{
-		std::cout << "66" << std::endl;
 		return false;
 	}
 	else if(x > mapSizeX)
 	{
-		std::cout << "68" << std::endl;
 		return false;
 	}
 
@@ -72,12 +70,10 @@ bool Map::Move(int x, int y, int prevX, int prevY)
 
 	if(MapContents[x][y] == ' ')
 	{
-		std::cout << "87" << std::endl;
-		return true;
+    	return true;
 	}
 	else
 	{
-		std::cout << "92" << std::endl;
 		return false;
 	}
 }

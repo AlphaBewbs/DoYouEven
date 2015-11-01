@@ -35,7 +35,7 @@ void GameInterface::chooseHero()
 	{
 		std::cout << "err... ummm... How about a number betwean 1 and 5?" << endl;
 		std::cout << "Lets try that again" << endl;
-		std::cout << "How many heros would you like?";
+		std::cout << "How many heros would you like? ";
 		cin >> size;
 	}
 	std::cout << endl << "Excellent! Lets build your team!" << endl << endl;
@@ -78,11 +78,6 @@ void GameInterface::chooseHero()
 		cout << "What should we name this hero? ";
 		std::getline (std::cin,name);
 		hero->setName(name);
-
-		std::cout << "Well here he is...." << endl;
-		std::cout << "('.')" << endl;
-		std::cout << "<)'(>" << endl;
-		std::cout << "_/'/_ " << endl;
 
 		std::cout << "...ONWARD THEN!" << endl;
 		//Tells the master to aadd a unit to the player team
