@@ -18,10 +18,12 @@ Student Number: 15075754
 *		@author Kyle Erwin and Ritesh Doolabh
 *		@version 1.8.10
 *
-*		@brief This is a class that stores units of the Bludgeoning type.
+*		@brief This is a class that allows the user to interact with the game. In which
+*		case it acts as the facade design pattern.
 *
 *		@section Description
-*		This class provides the functionality of attacking a party.
+*		This class provides the functionality that the game has to offer and allows for
+*		all movements.
 *
 */
 #ifndef GAMEINTERFACE_H
@@ -37,7 +39,7 @@ class GameInterface
 		/**
 		*		The private member variables that form part of the abstract factory
 		*		design pattern to create Units of either Monster or Player.
-		*/
+		**/
 		PlayerFactory playerFactory;
 		MonsterFactory monsterFactory;
 
@@ -48,34 +50,34 @@ class GameInterface
 	public:
 		/**
 		*		The constructor that creats a dynamic array for storing all of the units.
-		*/
+		**/
 		GameInterface(Master *);
 
 		/**
 		*		The destructor to de-allocate memory.
-		*/
+		**/
 		~GameInterface();
 
 		/**
 		*		@TODO implement startGame function
-		*/
+		**/
 		void startGame();
 
 		/**
 		*		@TODO implememnt the move funtion
-		*/
+		**/
 		void moveMonsters();
 
 
 		/**
 		*		This function allows the user to choose the kind of unit they want
 		* 	their hero to be.
-		*/
+		**/
 		void chooseHero();
 
 		//@NOTE new
 		/*
-		*
+		*	this function provides the implementation for moving the hero.
 		*
 		*/
 		void moveHero();
@@ -83,9 +85,12 @@ class GameInterface
 		/**
 		*		This function allows the user to choose the amount of monsters that
 		* 	they want.
-		*/
+		**/
 		void createMonsters();
 
+		/**
+		*		This function prints the map.
+		**/
 		void print();
 
 

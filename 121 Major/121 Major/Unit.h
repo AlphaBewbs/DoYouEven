@@ -139,7 +139,16 @@ class Unit
 		*/
 		virtual void update() = 0;
 
+
+		/*
+		*		This function sets the name of the unit.
+		*		@param name is the name of the unit.
+		*/
 		virtual void setName(string) = 0;
+
+		/*
+		*		This function returns the units name.
+		*/
 		virtual string getName() = 0;
 };
 //static int count = 0;
