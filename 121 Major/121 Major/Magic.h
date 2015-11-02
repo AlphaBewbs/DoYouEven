@@ -81,11 +81,27 @@ class Magic : public Unit
 		*/
 		void update();
 
+		/*
+		*		This function sets the name of the unit.
+		*		@param name is the name of the unit.
+		*/
 		virtual void setName(string _name) { name = _name; };
+
+		/*
+		*		This function returns the units name.
+		*/
 		virtual string getName() { return name; };
 
 		//Mediator @TODO doxygen comments
+		/*
+		*		this function is for the mediator design pattern initaites an event.
+		*/
 		virtual string event();
+
+		/*
+		*		This function is for the mediator dsign pattern and initiates an action
+		*		on units.
+		*/
 		virtual void act();
 };
 

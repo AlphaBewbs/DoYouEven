@@ -17,7 +17,8 @@ Student Number: 15075754
 *		@author Kyle Erwin and Ritesh Doolabh
 *		@version 1.8.10
 *
-*		@brief This is a class that stores units of the Bludgeoning type.
+*		@brief This is a class that stores units of the Bludgeoning type and also
+*		acts as the Concrete Prototype in the Prototype design pattern.
 *
 *		@section Description
 *		This class provides access to the attribules of all the Bludgeoning units
@@ -73,11 +74,27 @@ class Bludgeoning : public Unit
 		*/
 		void update();
 
+		/*
+		*		This function sets the name of the unit.
+		*		@param name is the name of the unit.
+		*/
 		virtual void setName(string _name) { name = _name; };
+
+		/*
+		*		This function returns the units name.
+		*/
 		virtual string getName() { return name; };
 
 		//Mediator
+		/*
+		*		this function is for the mediator design pattern initaites an event.
+		*/
 		virtual string event();
+
+		/*
+		*		This function is for the mediator dsign pattern and initiates an action
+		*		on units.
+		*/
 		virtual void act();
 };
 
